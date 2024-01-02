@@ -111,12 +111,12 @@ const styles = () => {
 }
 
 const scripts = () => {
-  return src('./src/js/main.js')
+  return src('./src/js/*.js')
     .pipe(webpackStream(
       {
         mode: 'development',
         output: {
-          filename: 'main.js',
+          filename: 'script.js',
         },
         module: {
           rules: [{

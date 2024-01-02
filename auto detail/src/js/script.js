@@ -46,11 +46,11 @@ createDots();
 
 
 
-function toggleMenu() {
-    const wrapMenu = document.querySelector('.wrap-menu');
-    const menuItems = document.querySelector('.menu-items');
-    const burgerIcon = document.querySelector('.burger-icon');
-    menuItems.classList.toggle('active');
-    wrapMenu.classList.toggle('active');
-    burgerIcon.classList.toggle('active');
-}
+// function toggleMenu() {
+//     const wrapMenu = document.querySelector('.wrap-menu');
+//     const menuItems = document.querySelector('.menu-items');
+//     const burgerIcon = document.querySelector('.burger-icon');
+//     menuItems.classList.toggle('active');
+//     wrapMenu.classList.toggle('active');
+//     burgerIcon.classList.toggle('active');
+// }

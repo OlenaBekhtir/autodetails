@@ -25,16 +25,17 @@
         <span class="burger__line"></span>
       </button>
       <nav class="nav header__nav">
+        <a href="./index.html" class="logo" aria-label="logo">
+          <img class="logo__img" src="./img/logo.jpg" alt="logo"/>
+        </a>
         <ul class="nav__list">
-          <li class="nav__item"><a href="./index.html" class="main-link nav__link">Home</a></li>
-          <li class="nav__item"><a href="./catalog.html" class="main-link nav__link">Catalog</a></li>
-          <li class="nav__item"><a href="./basket.html" class="main-link nav__link nav__link nav__link--current">Basket</a></li>
+          <li class="nav__item"><a href="./index.html" class="main-link nav__link-home">Головна</a>
+          </li>
+          <li class="nav__item"><a href="./catalog.html" class="main-link nav__link-home">Каталог</a></li>
+          <li class="nav__item"><a href="./basket.html" class="main-link nav__link nav__link-home nav__link--current">Корзина</a></li>
         </ul>
         <button class="nav__close btn-reset">close</button>
       </nav>
-      <a href="/" class="logo header__logo" aria-label="logo">
-
-      </a>
       <ul class="shop-nav header__shop-nav">
         <li class="shop-nav__item">
           <form action="#" class="shop-nav__search-form search-form">
@@ -53,6 +54,7 @@
     </div>
   </header>
 
+
         <main class="main">
             <section class="catalog">
                 <div>
@@ -60,77 +62,68 @@
                         <div id="cart-container"></div>
                         <div id="empty-cart-message"></div>
                         <div id="total-price"></div>
-                        <button id="basket-clear">Clear basket</button>
+                        <button id="basket-clear">Очистити корзину</button>
                     </div>
                 </div>
             </section>
         </main>
 
-        <footer class="footer footer--2">
-	<div class="container footer__container">
-    <div class="footer__content">
-      <div class="footer__top">
-        <div class="footer__column">
-          <ul class="social footer__social">
-            <li class="social__item"><a href="#" class="social__link social__link--tw" aria-label="Go to twitter"></a>
-            </li>
-            <li class="social__item"><a href="#" class="social__link social__link--fb" aria-label="Go to facebook"></a>
-            </li>
-            <li class="social__item"><a href="#" class="social__link social__link--in" aria-label="Go to instagram"></a>
-            </li>
-            <li class="social__item"><a href="#" class="social__link social__link--pin"
-                aria-label="Go to pinterest"></a></li>
-          </ul>
-        </div>
-        <div class="footer__column">
-          <ul class="footer__list footer__list--row">
-            <li class="footer__item"><a href="#" class="footer__link footer__link--row">Returns Policy</a></li>
-            <li class="footer__item"><a href="#" class="footer__link footer__link--row">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <div class="footer__column footer__column--flex">
-          <div class="footer__select">
-            <span class="footer__select-caption">Currency</span>
-            <div class="custom-select custom-select--footer" tabindex="0">
-              <div class="custom-select__top">USD</div>
-              <div class="custom-select__dropdown">
-                <ul class="custom-select__list">
-                  <li class="custom-select__item">USD</li>
-                  <li class="custom-select__item">EUR</li>
-                  <li class="custom-select__item">GRN</li>
-                </ul>
+        <footer class="footer">
+          <div class="container footer__container">
+            <div class="footer__content">
+              <div class="footer__top">
+                <div class="footer__column">
+                  <h3 class="footer__title">Покупцям</h3>
+                  <ul class="footer__list">
+                    <li class="footer__item"><a href="tel:+380982024017" class="footer__link">Телефон:<br/> +38(098)202-40-17</a>
+                    </li>
+                    <li class="footer__item"><a href="#" class="footer__link">Чат</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Про нас</a></li>
+                  </ul>
+                </div>
+                <div class="footer__column">
+                  <h3 class="footer__title">Компанія</h3>
+                  <ul class="footer__list">
+                    <li class="footer__item"><a href="tel:+8665972742" class="footer__link">Оплата</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Доставка</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Сертифікати</a></li>
+                  </ul>
+                </div>
+                <div class="footer__column">
+                  <h3 class="footer__title">Напишіть нам</h3>
+                  <form action="#" class="footer__form subscribe-form">
+                    <h4 class="subscribe-form__title">*Не хвилюйтесь, ми не надсилаємо спам</h4>
+                    <label class="subscribe-form__field">
+                      <input type="email" required placeholder="Email Address">
+                    </label>
+                    <button class="subscribe-form__btn btn-reset" type="submit">Надіслати</button>
+                  </form>
+                 
+                </div>
+              </div>
+              <div class="footer__bottom">
+                <div class="footer__left">
+                  <ul class="footer__list footer__list--row">
+                    <li class="footer__item"><a href="#" class="footer__link footer__link--row">Політика повернення</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link footer__link--row">Політика конфіденційності</a></li>
+                  </ul>
+                </div>
+                <div class="footer__right">
+                  <ul class="social footer__social">
+                    <li class="social__item"><a href="#" class="social__link social__link--tw"
+                        aria-label="Go to twitter"></a></li>
+                    <li class="social__item"><a href="https://www.facebook.com/vntu.official/"
+                        class="social__link social__link--fb" aria-label="Go to facebook"></a></li>
+                    <li class="social__item"><a href="#" class="social__link social__link--in"
+                        aria-label="Go to instagram"></a></li>
+                    <li class="social__item"><a href="#" class="social__link social__link--pin"
+                        aria-label="Go to pinterest"></a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div class="footer__select">
-            <span class="footer__select-caption">Language</span>
-            <div class="custom-select custom-select--footer" tabindex="0">
-              <div class="custom-select__top">English</div>
-              <div class="custom-select__dropdown">
-                <ul class="custom-select__list">
-                  <li class="custom-select__item">English</li>
-                  <li class="custom-select__item">Italian</li>
-                  <li class="custom-select__item">Ukraine</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <div class="footer__left">
-          <small class="footer__copy">
-            ©2023 3D MODELS SHOP  All rights reserved
-          </small>
-        </div>
-        <div class="footer__right">
-          <img src="img/payment.png" aria-hidden="true" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
+        </footer>
         <a href="#" class="to-top">
             <svg class="">
                 <use xlink:href="img/sprite.svg#to-top"></use>
