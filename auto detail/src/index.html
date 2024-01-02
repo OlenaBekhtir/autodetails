@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>AutoDetail</title>
+  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="shortcut icon" href="./img/logo.jpg" type="image/x-icon">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      max-width: 1260px;
+      width: 100%;
+      margin-inline: auto;
+      padding: 0;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      /* або будь-яке інше значення, яке вам потрібно */
+      margin: 0 auto;
+    }
+
+    .text {
+      margin-left: 50px;
+      margin-right: 30px;
+      margin-top: 30px;
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    .ul {
+      list-style-type: circle;
+      /* Встановлює тип маркера (в даному випадку, круглий) */
+      margin-left: 20px;
+      /* Встановлює відступ зліва для кращого вигляду */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header">
+      <div class="container header__container">
+        <button class="burger btn-reset header__burger">
+          <span class="burger__line"></span>
+        </button>
+        <nav class="nav header__nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="./index.html" class="main-link nav__link-home nav__link--current">Головна</a>
+            </li>
+            <li class="nav__item"><a href="./catalog.html" class="main-link nav__link-home">Каталог</a></li>
+            <li class="nav__item"><a href="./basket.html" class="main-link nav__link nav__link-home">Корзина</a></li>
+          </ul>
+          <button class="nav__close btn-reset">close</button>
+        </nav>
+        <a href="./index.html" class="logo" aria-label="logo">
+          <img class="logo__img" src="./img/logo.jpg" alt="logo"/>
+        </a>
+        <ul class="shop-nav header__shop-nav">
+          <li class="shop-nav__item">
+            <form action="#" class="shop-nav__search-form search-form">
+              <a href="./catalog.html" class="search-form__btn btn-reset" aria-label="Find"></a>
+            </form>
+          </li>
+          <li class="shop-nav__item">
+            <a href="./index.html" class="shop-nav__link shop-nav__link--user" aria-label="Go to cabinet"></a>
+          </li>
+          <li class="shop-nav__item">
+            <a href="./basket.html" class="shop-nav__link cart" aria-label="Go to cart">
+              <span class="cart__icon"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+
+    <main class="main">
+
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="banner-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="hero__content">
+                  <h2 class="hero__title">Автозапчастини</h2>
+                  <p class="hero__descr">Інтернет-магазин / Автомобільні деталі</p>
+                </div>
+              </div>
+            </div>
+      </section>
+
+      <section class="text">
+
+        <h3 class="text-title text-title__main">Про компанію</h3>
+        <p>Сьогодні автомобілі стають найбільш популярним видом транспорту і з кожним роком їхня кількість неухильно
+          збільшується. Водночас зростає попит на автозапчастини. Бажаючи щоб транспортний засіб прослужив довго, а
+          поїздки були комфортними та безпечними, запчастини для машини повинні відповідати критеріям якості, а сервісне
+          обслуговування виконувалося вчасно.
+        </p>
+        <p> З цією метою інтернет магазин "Автозапчастини" пропонує повний каталог нових автомобільних деталей за
+          максимально вигідною вартістю. Незалежно від бюджету, кожен автовласник зможе підібрати все необхідне для
+          ремонту та ТО. Незалежно від вартості, всі товари сертифіковані, мають гарантію</p>
+
+        <ol>
+          <li>
+            <h3 class="text-title">Чому покупці обирають "Автозапчастини"</h3>Коли виникає поломка автомобіля або має
+            бути плановий, капітальний ремонт, кожен прагне зробити вигідну купівлю якісного товару. Вибираючи компанію
+            «Автозапчастини», власник транспортного засобу отримує саме те, що бажає. Відвідавши офіційний сайт
+            компанії, можна вибрати та купити автозапчастини високої якості, з гарантією від відомих виробників.
+          </li>
+
+          <li>
+            <h3 class="text-title">Що пропонує компанія</h3>Вибрати та замовити запчастини на авто можна з будь-якого
+            куточка країни. Маючи гаджет та вихід в інтернет, Ви зможете ознайомитись, підібрати та замовити необхідні
+            позиції з каталогу. Асортимент компанії включає:
+            <ul>
+              <li class="ul">автозапчастини;</li>
+              <li class="ul">кузовні деталі;</li>
+              <li class="ul">шини та диски;</li>
+              <li class="ul">мастила, рідини, автохімію;</li>
+              <li class="ul">аксесуари;</li>
+              <li class="ul">оптику;</li>
+              <li class="ul">електроустаткування;</li>
+              <li class="ul">лакофарбові матеріали.</li>
+            </ul>
+            Товар представлений відомими вітчизняними та зарубіжними виробниками, а за рахунок прямих поставок,
+            запчастини для автомобіля та супутні товари мають доступну вартість, у чому можна переконатися, завантаживши
+            прайс-лист.
+          </li>
+
+          <li>
+            <h3 class="text-title">Як вибрати деталі онлайн</h3>З урахуванням бюджету та особистих переваг, кожен
+            покупець може вибрати запчастини на авто оригінальні або виготовлені за ліцензією. У разі виникнення питань,
+            можна скористатися допомогою менеджерів. Професіоналізм майстрів дозволяє підібрати та запропонувати кожному
+            готове рішення на запит, звичайно з урахуванням побажань клієнта.
+          </li>
+
+          <li>
+            <h3 class="text-title">Деталі до автомобілів в Україні: переваги покупки в компанії «Автозапчастини»</h3>
+            Багаторічний досвід та професіоналізм співробітників дозволяють знаходити оптимальне рішення для кожного
+            випадку, що дозволить виконати ремонт з урахуванням особистих побажань недорого.
+          <li class="ul">Для оптових та роздрібних покупців пропонується єдиний каталог та прайс, а великий вибір
+            товарів дозволить знайти все необхідне як для ремонту, так і для організації власного бізнесу.</li>
+          <li class="ul">Весь асортимент має європейські та національні сертифікати, гарантії виробника.</li>
+          <li class="ul">Компанія має власні складські приміщення, клієнтам не доведеться чекати поставок.</li>
+          <li class="ul">За рахунок прямих поставок багатьох позицій, вартість деталей має максимально низьку вартість.
+          </li>
+          <li class="ul">Кожен, хто хоч один раз здійснив покупку, отримує знижку під час оформлення наступних
+            замовлень.</li>
+          <li class="ul">У разі виникнення питань або труднощів при виборі, можна звернутися за допомогою кваліфікованих
+            менеджерів.</li>
+          </li>
+        </ol>
+      </section>
+
+      <div class="carousel">
+        <div class="carousel-container">
+          <a href="./catalog.html">
+            <div class="carousel-item"><img class="carousel-img" src="./img/slide1.jpg" alt="Slide 1"></div>
+          </a>
+          <a href="./catalog.html">
+            <div class="carousel-item"><img class="carousel-img" src="./img/slide2.jpg" alt="Slide 2"></div>
+          </a>
+          <a href="./catalog.html">
+            <div class="carousel-item"><img class="carousel-img" src="./img/slide3.jpg" alt="Slide 3"></div>
+          </a>
+        </div>
+        <div class="carousel-dots"></div>
+      </div>
+
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__content">
+          <div class="footer__top">
+            <div class="footer__column">
+              <h3 class="footer__title">Покупцям</h3>
+              <ul class="footer__list">
+                <li class="footer__item"><a href="tel:+380982024017" class="footer__link">Телефон:<br/> +38(098)202-40-17</a>
+                </li>
+                <li class="footer__item"><a href="#" class="footer__link">Чат</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Про нас</a></li>
+              </ul>
+            </div>
+            <div class="footer__column">
+              <h3 class="footer__title">Компанія</h3>
+              <ul class="footer__list">
+                <li class="footer__item"><a href="tel:+8665972742" class="footer__link">Оплата</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Доставка</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Сертифікати</a></li>
+              </ul>
+            </div>
+            <div class="footer__column">
+              <h3 class="footer__title">Напишіть нам</h3>
+              <form action="#" class="footer__form subscribe-form">
+                <h4 class="subscribe-form__title">*Не хвилюйтесь, ми не надсилаємо спам</h4>
+                <label class="subscribe-form__field">
+                  <input type="email" required placeholder="Email Address">
+                </label>
+                <button class="subscribe-form__btn btn-reset" type="submit">Надіслати</button>
+              </form>
+             
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__left">
+              <ul class="footer__list footer__list--row">
+                <li class="footer__item"><a href="#" class="footer__link footer__link--row">Політика повернення</a></li>
+                <li class="footer__item"><a href="#" class="footer__link footer__link--row">Політика конфіденційності</a></li>
+              </ul>
+            </div>
+            <div class="footer__right">
+              <ul class="social footer__social">
+                <li class="social__item"><a href="#" class="social__link social__link--tw"
+                    aria-label="Go to twitter"></a></li>
+                <li class="social__item"><a href="https://www.facebook.com/vntu.official/"
+                    class="social__link social__link--fb" aria-label="Go to facebook"></a></li>
+                <li class="social__item"><a href="#" class="social__link social__link--in"
+                    aria-label="Go to instagram"></a></li>
+                <li class="social__item"><a href="#" class="social__link social__link--pin"
+                    aria-label="Go to pinterest"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+    const dotsContainer = document.querySelector('.carousel-dots');
+
+    function showSlide(index) {
+      if (index < 0) {
+        currentIndex = totalItems - 1;
+      } else if (index >= totalItems) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+
+      const newTransformValue = -currentIndex * 34 + '%';
+      document.querySelector('.carousel-container').style.transform = 'translateX(' + newTransformValue + ')';
+      updateDots();
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    function updateDots() {
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    function createDots() {
+      for (let i = 0; i < totalItems; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        dot.addEventListener('click', () => showSlide(i));
+        dotsContainer.appendChild(dot);
+      }
+      updateDots();
+    }
+
+    createDots();
+
+  </script>
+</body>
+
+</html>

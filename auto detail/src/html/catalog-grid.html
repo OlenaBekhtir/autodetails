@@ -1,0 +1,1081 @@
+<script>
+
+  // Список товарів
+
+  const products = [
+    {
+      "name": "Keycap",
+      "title": "KEYCAP TANK",
+      "price": 10.00,
+      "image": "./img/keycap_prod1.jpg",
+      "info": "MX cherry keycap tank form Metal Slug, DESIGN NUMBER	578558, 3D MODEL SIZE	X 17 × Y 17.5 × Z 18.7 mm",
+      colors: {
+        "grey": "./img/keycap_prod1_grey.jpg",
+        "black": "./img/keycap_prod1_black.jpg",
+      }
+    },
+    {
+      "name": "Keycap",
+      "title": "KEYCAP HALLOWEEN",
+      "price": 12.00,
+      "image": "./img/keycap_prod2.jpg",
+      "info": "CATSKULL HALLOWEEN KEYCAP - MECHANICAL KEYBOARD, DESIGN NUMBER	1495087",
+      colors: {
+        "black": "./img/keycap_prod2_black.jpg",
+        "violet": "./img/keycap_prod2_violet.jpg",
+      }
+    },
+    {
+      "name": "Keycap",
+      "title": "KEYCAP ARTISAN",
+      "price": 15.00,
+      "image": "./img/keycap_prod3_black.jpg",
+      "info": "Small project in the weekend. Amazed by the Ender Printed with 0.4 nozzle, DESIGN NUMBER	310627",
+      colors: {
+        "grey": "./img/keycap_prod3.jpg",
+        "blue": "./img/keycap_prod3_blue.jpg"
+      }
+    },
+    {
+      "name": "Keycap",
+      "title": "KEYCAP CORGI",
+      "price": 18.00,
+      "image": "./img/keycap_prod4.jpg",
+      "info": "PUPPY CORGI KEYCAPS - MECHANICAL KEYBOARD, DESIGN NUMBER	1175802, This design is separated into 2 parts that form this cute corgi: a keycap is his head another keycap is her cute",
+      colors: {
+        "orange": "./img/keycap_prod4_orange.jpg",
+        "beige": "./img/keycap_prod4_beige.jpg"
+      }
+    },
+    {
+      "name": "Keycap",
+      "title": "KEYCAP UNIT",
+      "price": 20.00,
+      "image": "./img/keycap_prod5.jpg",
+      "info": "EVANGELION UNIT-01, 02 KEYCAPS - MECHANICAL KEYBOARD, DESIGN NUMBER	1562109, You can paint them according to their different versions seen in the anime.",
+      colors: {
+        "violet": "./img/keycap_prod5_violet.jpg",
+        "red": "./img/keycap_prod5_red.jpg"
+      }
+    },
+    {
+      "name": "Sewing",
+      "title": "SEWING THIMBLE",
+      "price": 5.00,
+      "image": "./img/sewing_prod1.jpg",
+      "info": "THIMBLE, DESIGN NUMBER	623371, Six Beautiful Thimbles. Take care of your fingers",
+      colors: {
+        "red": "./img/sewing_prod1_red.jpg",
+        "green": "./img/sewing_prod1_green.jpg",
+        "blue": "./img/sewing_prod1_blue.jpg",
+      }
+    },
+    {
+      "name": "Sewing",
+      "title": "SEWING THIMBLE",
+      "price": 8.00,
+      "image": "./img/sewing_prod2.jpg",
+      "info": "THIMBLE WITH SEWING MACHINE, DESIGN NUMBER	315404, made it in two parts and then pasted it",
+      colors: {
+        "black": "./img/sewing_prod2_black.jpg",
+        "blue": "./img/sewing_prod2_blue.jpg",
+      }
+    },
+    {
+      "name": "Sewing",
+      "title": "SEWING BUST",
+      "price": 95.00,
+      "image": "./img/sewing_prod3.jpg",
+      "info": "BARBIE SEWING BUST, DESIGN NUMBER	266525,Barbie sewing bust, on a 4 foot pedestal. the bust is connected to the pedestal by a 6mm diameter brass bar dimensions: shoulder width 44mm width at the chest: 30.5 mm bust height: 92mm",
+      colors: {
+        "grey": "./img/sewing_prod3_grey.jpg",
+        "beige": "./img/sewing_prod3.jpg",
+      }
+    },
+    {
+      "name": "Sewing",
+      "title": "SEWING WOOL",
+      "price": 40.00,
+      "image": "./img/sewing_prod4.jpg",
+      "info": "KITTY KAT WOOL BOWL, DESIGN NUMBER	247990, The diameter is about: 166 mm the height is about 81.7 mm",
+      colors: {
+        "grey": "./img/sewing_prod4_grey.jpg",
+        "red": "./img/sewing_prod4_red.jpg",
+        "broun": "./img/sewing_prod4_broun.jpg",
+      }
+    },
+    {
+      "name": "Sewing",
+      "title": "SEWING CONTAINERS",
+      "price": 30.00,
+      "image": "./img/sewing_prod5.jpg",
+      "info": "KNITTED 3D PRINTED CONTAINERS, DESIGN NUMBER	854900, this is a set of 3D printed containers in which we can store wool, threads, etc. It looks like it's really made by knitting wool.",
+      colors: {
+        "while": "./img/sewing_prod5_white.jpg",
+        "blue": "./img/sewing_prod5_blue.jpg",
+      }
+    },
+    {
+      "name": "Benchy",
+      "title": "BENCHY FLOATING",
+      "price": 45.00,
+      "image": "./img/benchy_prod1.jpg",
+      "info": "BEN THE FLOATING BENCHMARK (BENCHY), DESIGN NUMBER	21726",
+      "colors": {
+        "green": "./img/benchy_prod1_green.jpg",
+        "red": "",
+      }
+    },
+    {
+      "name": "Benchy",
+      "title": "BENCHY QUEEN",
+      "price": 47.00,
+      "image": "./img/benchy_prod2.jpg",
+      "info": "JUN - THE JUNGLE QUEEN, Into the jungle with JUN the Jungle Queen There is nothing more beautiful than an adventure. With Jun you can let your imaginative adventures run free. She swims in shallow waters, but the deep sea is not for Jun. Have fun exploring your own limits.",
+      "colors": {
+        "broun": "./img/benchy_prod2.jpg",
+      }
+    },
+    {
+      "name": "Benchy",
+      "title": "BENCHY BATHMAN",
+      "price": 35.00,
+      "image": "./img/benchy_prod3.jpg",
+      "info": "BATHMAN, DESIGN NUMBER	145466, Mixed various files from thingiverse",
+      "colors": {
+        "beige": "./img/benchy_prod3.jpg",
+        "grey": "./img/benchy_prod3_grey.jpg",
+      }
+    },
+    {
+      "name": "Benchy",
+      "title": "BENCHY BOB",
+      "price": 50.00,
+      "image": "./img/benchy_prod4.jpg",
+      "info": "BOB THE PLUGGABLE, DESIGN NUMBER	22809, colored object that always looks better on children than a monochrome one. But since not everyone has a multicolor printer and they use a lot of material, I tried a different solution with BOB",
+      "colors": {
+        "red-black": "./img/benchy_prod4_red_black.jpg",
+        "white-green": "./img/benchy_prod4_white_green.jpg",
+      }
+    },
+    {
+      "name": "Benchy",
+      "title": "BENCHY CHRISTMAS",
+      "price": 42.00,
+      "image": "./img/benchy_prod5.jpg",
+      "info": "EASY-PRINT BENCHY CHRISTMAS TREE HANGER, DESIGN NUMBER	148276,  This version has thinner hooks and a wedge-shaped peg that goes into the Benchy's chimney. The wedge adapts to varying interior diameters better than the round peg in the original design, and also prints cleaner. Enjoy!",
+      "colors": {
+        "violet": "./img/benchy_prod5_violet.jpg",
+        "orange": "./img/benchy_prod5.jpg",
+      }
+    },
+    {
+      "name": "Snakes",
+      "title": "SNAKES DRAGONAIR",
+      "price": 55.00,
+      "image": "./img/snakes_prod1.jpg",
+      "info": "ARTICULATED DRAGONAIR, DESIGN NUMBER	719360",
+      "colors": {
+        "blue": "./img/snakes_prod1_blue.jpg",
+        "broun": "./img/snakes_prod1_broun.jpg",
+        "grey": "./img/snakes_prod1_grey.jpg",
+      }
+    },
+    {
+      "name": "Snakes",
+      "title": "SNAKE SNAP",
+      "price": 57.00,
+      "image": "./img/snakes_prod2.jpg",
+      "info": "SNAKE SNAP-ON FLEXI, DESIGN NUMBER	240633, This snake snap on toy is printed separately and attaches in the order you desire. It come with two heads (male and female), 4 different body type designs, and 4 different tail designs.",
+      "colors": {
+        "orange": "./img/snakes_prod2.jpg",
+        "grey": "./img/snakes_prod2_grey.jpg",
+      }
+    },
+    {
+      "name": "Snakes",
+      "title": "SNAKE MAGIC",
+      "price": 95.00,
+      "image": "./img/snakes_prod3.jpg",
+      "info": "MAGIC SNAKE, ARTICULATED, PRINT-IN-PLACE, POSABLE, ANIMATED, FIXABLE, DESIGN NUMBER	953096",
+      "colors": {
+        "green": "./img/snakes_prod3_green.jpg",
+        "blue": "./img/snakes_prod3_blue.jpg",
+      }
+    },
+    {
+      "name": "Snakes",
+      "title": "SNAKE NOSE-HORNED",
+      "price": 60.00,
+      "image": "./img/snakes_prod4.jpg",
+      "info": "NOSE-HORNED VIPER, DESIGN NUMBER	869073, the Nose-horned Viper is flexible model designed to feel like a real snake.",
+      "colors": {
+        "green-red": "./img/snakes_prod4_green.jpg",
+      }
+    },
+    {
+      "name": "Snakes",
+      "title": "SNAKE & APPLE",
+      "price": 80.00,
+      "image": "./img/snakes_prod5.jpg",
+      "info": "THE APPLE AND THE SNAKE, ",
+      "colors": {
+        "white": "./img/snakes_prod5_white.jpg",
+        "green-yellow": "./img/snakes_prod5_green-yellow.jpg",
+      }
+    },
+    {
+      "name": "Chess",
+      "title": "CHESS MINION",
+      "price": 110.00,
+      "image": "./img/chess_prod1.jpg",
+      "info": "PURPLE MINION CHESS SET WITH HAIR FOR FDM PRINTERS, DESIGN NUMBER	280289",
+      "colors": {
+        "blue-yellow": "./img/chess_prod1_blue.jpg",
+      }
+    },
+    {
+      "name": "Chess",
+      "title": "CHESS TABLERO",
+      "price": 150.00,
+      "image": "./img/chess_prod2.jpg",
+      "info": "TABLERO PUZZLE AJEDREZ, DESIGN NUMBER	105273, the piezas de puzzle que forman un tablero de ajedrez.",
+      "colors": {
+        "white-black": "./img/chess_prod2_white.jpg",
+      }
+    },
+    {
+      "name": "Chess",
+      "title": "CHESS FREEMASON",
+      "price": 180.00,
+      "image": "./img/chess_prod3.jpg",
+      "info": "Wonder how Illuminati got control of the world ? They trained on the freemason chess! FREEMASON CHESS, DESIGN NUMBER	461652",
+      "colors": {
+        "silve-gold": "./img/chess_prod3_silve.jpg",
+      }
+    },
+    {
+      "name": "Chess",
+      "title": "CHESS 4 PLAYERS",
+      "price": 175.00,
+      "image": "./img/chess_prod4.jpg",
+      "info": "You like strategy and even more when it's multiplayer? Go on and try Chaturanga 4 player ancient chess variant. CHESS 4 PLAYERS CHATURANGA, DESIGN NUMBER	539988",
+      "colors": {
+        "4 colors": "./img/chess_prod4_4color.jpg",
+      }
+    },
+    {
+      "name": "Chess",
+      "title": "CHESS TOURNAMENT",
+      "price": 160.00,
+      "image": "./img/chess_prod5.jpg",
+      "info": "CHESS SET TOURNAMENT STYLE, DESIGN NUMBER	240154",
+      "colors": {
+        "black-beige": "./img/chess_prod5_black_beige.jpg",
+      }
+    },
+    {
+      "name": "Mate",
+      "title": "MATE",
+      "price": 40.00,
+      "image": "./img/mate_prod1.jpg",
+      "info": "Due to popular demand we are sharing our Mate! It is necessary to use PETG since it has excellent layer adhesion and it is food safe. DESIGN NUMBER	25523",
+      "colors": {
+        "green": "./img/mate_prod1_green.jpg",
+        "red": "./img/mate_prod1.jpg"
+      }
+    },
+    {
+      "name": "Mate",
+      "title": "MATE STICH ",
+      "price": 60.00,
+      "image": "./img/mate_prod2.jpg",
+      "info": "MATE STICH CON CUERPO, 3D MODEL SIZE	X 170 × Y 104 × Z 133 mm, DESIGN NUMBER	178341",
+      "colors": {
+        "multicolor": "./img/mate_prod2.jpg",
+      }
+    },
+    {
+      "name": "Mate",
+      "title": "MATE",
+      "price": 50.00,
+      "image": "./img/mate_prod3_main.jpg",
+      "info": "MATE HARRY POTTER, DESIGN NUMBER	199023, 3D MODEL SIZE	X 104 × Y 97.2 × Z 66.9 mm",
+      "colors": {
+        "multicolor": "./img/mate_prod3.jpg",
+      }
+    },
+    {
+      "name": "Mate",
+      "title": "MATE FUTBOL",
+      "price": 45.00,
+      "image": "./img/mate_prod4.jpg",
+      "info": "MATE PELOTA DE FUTBOL, DESIGN NUMBER	180760, 3D MODEL SIZE	X 96 × Y 96 × Z 65.5 mm",
+      "colors": {
+        "black-white": "./img/mate_prod4.jpg",
+      }
+    },
+    {
+      "name": "Mate",
+      "title": "MATE GASPAR",
+      "price": 45.00,
+      "image": "./img/mate_prod5.jpg",
+      "info": "MATE GASPAR (THE SIMPSONS), DESIGN NUMBER	200255, 3D MODEL SIZE	X 103 × Y 120 × Z 84 mm",
+      "colors": {
+        "multicolor": "./img/mate_prod5_multicolor.jpg",
+      }
+    },
+    {
+      "name": "Helicopters",
+      "title": "HELICOPTER COPTER",
+      "price": 25.00,
+      "image": "./img/helicopters_prod1.jpg",
+      "info": "PULL COPTER FINGER RING, DESIGN NUMBER	164383, Pull Copter Finger Ring that was designed to be printed on the tiny Fulcrum Minibot 3d printer with a buildvolume of only 7.5x7x7cm",
+      colors: {
+        "red": "./img/helicopters_prod1_red.jpg",
+        "orange": "./img/helicopters_prod1_orange.jpg",
+        "yellow": "./img/helicopters_prod1_yellow.jpg",
+      }
+    },
+    {
+      "name": "Helicopters",
+      "title": "HELICOPTER FLYING",
+      "price": 23.00,
+      "image": "./img/helicopters_prod2.jpg",
+      "info": "FLYING HELICOPTER TOY, DESIGN NUMBER	7823, Ode to the childhood flying toys - pull this helicopter;s tail and its rotors will fly high in the air",
+      colors: {
+        "red": "./img/helicopters_prod2_red.jpg",
+        "yellow": "./img/helicopters_prod2_yellow.jpg",
+      }
+    },
+    {
+      "name": "Helicopters",
+      "title": "HELICOPTER GYROBOMBER",
+      "price": 35.00,
+      "image": "./img/helicopters_prod3.jpg",
+      "info": "DWARF GYROBOMBER, DESIGN NUMBER	18145, GyroBomber with Connectors to make it interchangeable between a Copter and a Bomber without the use of glue. However, the engine parts will have to be printed separately and glued on still.",
+      colors: {
+        "pink-white": "./img/helicopters_prod3_pink_white.jpg",
+        "red-yellow": "./img/helicopters_prod3_red_yellow.jpg",
+        "red-broun": "./img/helicopters_prod3_red_broun.jpg",
+      }
+    },
+    {
+      "name": "Helicopters",
+      "title": "HELICOPTER BELL 206",
+      "price": 66.00,
+      "image": "./img/helicopters_prod4.jpg",
+      "info": "BELL 206 HELICOPTER, DESIGN NUMBER	464177, Helicopter BELL 206 Long Ranger is a multipurpose helicopter developed by the American firm Bell Helicopter",
+      colors: {
+        "grey": "./img/helicopters_prod4_grey.jpg",
+        "white-green": "./img/helicopters_prod4.jpg",
+        "yellow-grey": "./img/helicopters_prod4_yellow_grey.jpg",
+      }
+    },
+    {
+      "name": "Helicopters",
+      "title": "HELICOPTER",
+      "price": 70.00,
+      "image": "./img/helicopters_prod5.jpg",
+      "info": "HELICUTE, DESIGN NUMBER	458770, A helicopter model that can be used for multiple purposes. suitable for production. Includes step and solidworks files",
+      colors: {
+        "broun": "./img/helicopters_prod5_broun.jpg",
+        "grey": "./img/helicopters_prod5_grey.jpg",
+        "yellow": "./img/helicopters_prod5_yellow.jpg",
+        "blue": "./img/helicopters_prod5_blue.jpg",
+        "white-violet": "./img/helicopters_prod5.jpg",
+      }
+    },
+    {
+      "name": "Funko",
+      "title": "FUNKO VEGETA",
+      "price": 35.00,
+      "image": "./img/funko_prod1.jpg",
+      "info": "VEGETA FUNKO STYLO, DESIGN NUMBER	368406, 3D MODEL SIZE	X 58.8 × Y 52.4 × Z 100 mm",
+      colors: {
+        "white": "./img/funko_prod1_white.jpg",
+      }
+    },
+    {
+      "name": "Funko",
+      "title": "FUNKO POP",
+      "price": 30.00,
+      "image": "./img/funko_prod2.jpg",
+      "info": "FUNKO POP VALENTINO ROSSI, DESIGN NUMBER	195634, 3D MODEL SIZE	X 3.67 × Y 3.5 × Z 5.87 mm",
+      colors: {
+        "white": "./img/funko_prod2_white.jpg",
+      }
+    },
+    {
+      "name": "Funko",
+      "title": "FUNKO JOKER",
+      "price": 25.00,
+      "image": "./img/funko_prod3.jpg",
+      "info": "FUNKO JOKER, DESIGN NUMBER	52408",
+      colors: {
+        "white": "./img/funko_prod3_white.jpg",
+      }
+    },
+    {
+      "name": "Funko",
+      "title": "FUNKO YODALORIAN",
+      "price": 40.00,
+      "image": "./img/funko_prod4.jpg",
+      "info": "THE YODALORIAN - FAN ART, DESIGN NUMBER	110406, make this new design of the mandalorian Gogu mandalorian its ready and optimized to print!",
+      colors: {
+        "light": "./img/funko_prod4_light.jpg",
+        "dark": "./img/funko_prod4_dark.jpg",
+      }
+    },
+    {
+      "name": "Funko",
+      "title": "FUNKO POKEMON",
+      "price": 45.00,
+      "image": "./img/funko_prod5.jpg",
+      "info": "PIKACHU POKEMON POKEMON FUNKO POP COLLECTION, DESIGN NUMBER	143650, X: Width Length: 75mm, Z: Depth Length: 48mm, Y: Height Length: 100mm",
+      colors: {
+        "white": "./img/funko_prod5_white.jpg",
+        "beige": "./img/funko_prod5_beige.jpg",
+      }
+    },
+    {
+      "name": "Playmobil",
+      "title": "PLAY DARTH",
+      "price": 50.00,
+      "image": "./img/playmobil_prod1.jpg",
+      "info": "DARTH VADER PLAYMOBIL, DESIGN NUMBER	80373, use Supports on head, body and arms.",
+      "colors": {
+        "black": "./img/playmobil_prod1_black.jpg",
+        "dark": "./img/playmobil_prod1.jpg",
+      }
+    },
+    {
+      "name": "Playmobil",
+      "title": "PLAY ARMCHAIRS",
+      "price": 20.00,
+      "image": "./img/playmobil_prod2.jpg",
+      "info": "2 PLAYMOBIL ARMCHAIRS, DESIGN NUMBER	20350, armchair for playmobil or for small dolls with eagle decorations on the side and nothing simple for the other chair 7 cm high 4 cm wide and long",
+      "colors": {
+        "grey": "./img/playmobil_prod2_grey.jpg",
+        "white": "./img/playmobil_prod2_white.jpg",
+      }
+    },
+    {
+      "name": "Playmobil",
+      "title": "PLAYGROUND SLIDE",
+      "price": 37.00,
+      "image": "./img/playmobil_prod3.jpg",
+      "info": "PLAYMOBIL PLAYGROUND SLIDE, DESIGN NUMBER	84166, This slide consists of several parts, but it is very easy to print and assemble!",
+      "colors": {
+        "grey": "./img/playmobil_prod3_grey.jpg",
+        "multicolor": "./img/playmobil_prod3_multicolor.jpg",
+      }
+    },
+    {
+      "name": "Playmobil",
+      "title": "PLAY HORSE",
+      "price": 20.00,
+      "image": "./img/playmobil_prod4.jpg",
+      "info": "ARTICULATED TOY HORSE, DESIGN NUMBER	90291, the head is articulated for up and down movement.",
+      "colors": {
+        "white": "./img/playmobil_prod4_white.jpg",
+        "beige": "./img/playmobil_prod4.jpg",
+      }
+    },
+    {
+      "name": "Playmobil",
+      "title": " PLAY BANK",
+      "price": 60.00,
+      "image": "./img/playmobil_prod5.jpg",
+      "info": "PLAYMOBIL 1999 WESTERN NATIONAL BANK COACH DOOR SLIDE REPLACEMENT (NR 3037), DESIGN NUMBER	147404, 3D MODEL SIZE	X 28 × Y 6 × Z 9.9 mm",
+      "colors": {
+        "red": "./img/playmobil_prod5_red.jpg",
+      }
+    },
+    {
+      "name": "Landmarks",
+      "title": "LANDMARK EIFFEL TOWER",
+      "price": 50.00,
+      "image": "./img/landmarks_prod1.jpg",
+      "info": "Having a Paris based design studio, we absolutely needed an Eiffel Tower. So, why not making it big and orange, like le FabShop. Thanks to B9 creation, who had already designed one, we only had to use Netfabb to slice their model in 7 main components and glue them together with epoxy. It is our most impressive part.",
+      colors: {
+        "white": "./img/landmarks_prod1_white.jpg",
+        "orange": "./img/landmarks_prod1_orange.jpg",
+      }
+    },
+    {
+      "name": "Landmarks",
+      "title": "LANDMARK SPHINX",
+      "price": 60.00,
+      "image": "./img/landmarks_prod2.jpg",
+      "info": "EGYPTIAN SPHINX, DESIGN NUMBER	86836",
+      colors: {
+        "gold": "./img/landmarks_prod2_gold.jpg",
+        "bronze": "./img/landmarks_prod2.jpg",
+      }
+    },
+    {
+      "name": "Landmarks",
+      "title": "LANDMARK BIGBEN",
+      "price": 55.00,
+      "image": "./img/landmarks_prod3.jpg",
+      "info": "BIG BEN, DESIGN NUMBER	13284, Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London, and often extended to refer to the clock and the clock tower. The tower is officially known as the Elizabeth Tower, renamed as such to celebrate the Diamond Jubilee of Elizabeth II",
+      colors: {
+        "light-grey": "./img/landmarks_prod3.jpg",
+      }
+    },
+    {
+      "name": "Landmarks",
+      "title": "LANDMARK LIBERTY",
+      "price": 80.00,
+      "image": "./img/landmarks_prod4.jpg",
+      "info": "STATUE OF LIBERTY - REPAIRED, DESIGN NUMBER	40627, The amazing Statue of Liberty from New York! Amaze friends, family, teachers, and even pets with this awesome replica. It was printed from a flash forge printer from Kens Hub",
+      colors: {
+        "green": "./img/landmarks_prod4_green.jpg",
+      }
+    },
+    {
+      "name": "Landmarks",
+      "title": "LANDMARK GIZA",
+      "price": 85.00,
+      "image": "./img/landmarks_prod5.jpg",
+      "info": "THE GREAT PYRAMID OF GIZA, THE GREAT PYRAMID OF GIZA, What we know about Egypt's ancient civilization comes from what was left behind. Archaeologists scour the region for remnants to piece together pictures of the past, but some clues are hard to miss: at six and a half million ton, taller than the Statue of Liberty, and as wide as 10 football fields, the Great Pyramid of Giza can be seen from space.",
+      colors: {
+        "sand": "./img/landmarks_prod5_sand.jpg",
+      }
+    },
+    {
+      "name": "Cosplay",
+      "title": "COSPLAY MAN",
+      "price": 180.00,
+      "image": "./img/cosplay_prod1.jpg",
+      "info": "IRON MAN MK6 MK 6 SUIT, DESIGN NUMBER	63998, It looks great, but it is NOT comfortable",
+      colors: {
+        "red": "./img/cosplay_prod1_red.jpg",
+        "black": "./img/cosplay_prod1_black.jpg",
+      }
+    },
+    {
+      "name": "Cosplay",
+      "title": "COSPLAY MASK",
+      "price": 66.00,
+      "image": "./img/cosplay_prod2.jpg",
+      "info": "DOCTOR DOOM MASK, DESIGN NUMBER	40292, behold, a mask for burgeoning super-villain aspirations ",
+      colors: {
+        "silvery": "./img/cosplay_prod2_silver.jpg",
+        "bronze": "./img/cosplay_prod2_bronze.jpg",
+      }
+    },
+    {
+      "name": "Cosplay",
+      "title": "COSPLAY CAT",
+      "price": 57.00,
+      "image": "./img/cosplay_prod3.jpg",
+      "info": "SPLICER CAT MASK (BIOSHOCK), DESIGN NUMBER	20876, Love the power of vigors but afraid your fellow citizens of Rapture may not appreciate your thrilling new look? Well then have I got the mask for you",
+      colors: {
+        "white": "./img/cosplay_prod3_white.jpg",
+        "dark-grey": "./img/cosplay_prod3_darkgrey.jpg",
+      }
+    },
+    {
+      "name": "Cosplay",
+      "title": "COSPLAY SKYRIM",
+      "price": 36.00,
+      "image": "./img/cosplay_prod4.jpg",
+      "info": "SKYRIM HEALTH AND MANA POTION (LESSER POTIONS) PROPS REPLICA, DESIGN NUMBER	42372, modeled in fusion from scratch, and photos from the game",
+      colors: {
+        "red": "./img/cosplay_prod4_red.jpg",
+        "blue": "./img/cosplay_prod4_blue.jpg",
+      }
+    },
+    {
+      "name": "Cosplay",
+      "title": "COSPLAY COMPASS",
+      "price": 90.00,
+      "image": "./img/cosplay_prod5.jpg",
+      "info": "LINKLE'S COMPASS, DESIGN NUMBER	48443, A Linkle compass for cosplay/halloween.",
+      colors: {
+        "yellow": "./img/cosplay_prod5_yellow.jpg",
+        "bronze": "./img/cosplay_prod5.jpg",
+      }
+    },
+    {
+      "name": "Dragon",
+      "title": "DRAGON BALL",
+      "price": 55.00,
+      "image": "./img/dragon_prod1.jpg",
+      "info": "KORIN - DRAGON BALL, DESIGN NUMBER	33260, Korin the immortal cat from Dragon Ball",
+      colors: {
+        "white": "./img/dragon_prod1_white.jpg",
+        "grey": "./img/dragon_prod1_grey.jpg",
+      }
+    },
+    {
+      "name": "Dragon",
+      "title": "DRAGON VEGETA",
+      "price": 82.00,
+      "image": "./img/dragon_prod2.jpg",
+      "info": "VEGETA - DRAGONBALL 3D PRINT MODEL 3D PRINT MODEL, DESIGN NUMBER	31086",
+      colors: {
+        "blue-yellow": "./img/dragon_prod2_blue_yellow.jpg",
+        "bronze": "./img/dragon_prod2_bronze.jpg",
+      }
+    },
+    {
+      "name": "Dragon",
+      "title": "DRAGON BALL",
+      "price": 80.00,
+      "image": "./img/dragon_prod3.jpg",
+      "info": "DRAGON ON THE CRYSTAL BALL, DESIGN NUMBER	4956",
+      colors: {
+        "grey-yellow": "./img/dragon_prod3_grey_yellow.jpg",
+        "beige": "./img/dragon_prod3_beige.jpg",
+      }
+    },
+    {
+      "name": "Dragon",
+      "title": "DRAGON GOKU",
+      "price": 73.00,
+      "image": "./img/dragon_prod4.jpg",
+      "info": "OOZARU - GOKU - DRAGONBALL, DESIGN NUMBER	27004, Kong Oozaru style in dragonball",
+      colors: {
+        "yellow": "./img/dragon_prod4_yellow.jpg",
+        "beige": "./img/dragon_prod4_beige.jpg",
+        "white": "./img/dragon_prod4_white.jpg",
+      }
+    },
+    {
+      "name": "Dragon",
+      "title": "DRAGON TOPPO",
+      "price": 65.00,
+      "image": "./img/dragon_prod5.jpg",
+      "info": "TOPPO STL - DRAGON BALL SUPER - 3D PRINT MODEL, DESIGN NUMBER	27740, The model measures: Width : 179 mm, Height: 270 mm, Depth : 121 mm",
+      colors: {
+        "silver": "./img/dragon_prod5_silver.jpg",
+        "beige": "./img/dragon_prod5_bronze.jpg",
+        "grey": "./img/dragon_prod5_grey.jpg",
+      }
+    },
+  ]
+
+
+  // Получаем контейнер для товаров
+  const productsContainer = document.getElementById("products-container");
+
+  // Отримуємо контейнер для відображення деталей товару
+  const productDetailsContainer = document.getElementById("product-details");
+
+  // Отримуємо список кнопок для зміни кількості колонок
+  const buttons = document.querySelectorAll(".catalog-columns__btn");
+
+  // Змінна для зберігання поточної кількості колонок
+  let currentColumns = 4; // Значення за замовчуванням
+
+
+  // Додаємо обробник подій для кожної кнопки
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+      // Отримуємо значення атрибута data-columns кнопки
+      const columns = parseInt(this.getAttribute("data-columns"));
+
+      // Змінюємо значення поточної кількості колонок
+      currentColumns = columns;
+
+      // Видаляємо клас catalog-columns__btn--current у всіх кнопок
+      buttons.forEach(btn => {
+        btn.classList.remove("catalog-columns__btn--current");
+      });
+
+      // Додаємо клас catalog-columns__btn--current обраній кнопці
+      this.classList.add("catalog-columns__btn--current");
+
+      // Викликаємо функцію для зміни кількості колонок та стилів
+      changeColumns(currentColumns);
+
+      // Получаем все чекбоксы категорий
+      const categoryCheckboxes = document.querySelectorAll('.custom-checkbox__input');
+
+      // Получаем все товары
+      const productsArr = document.querySelectorAll('.product');
+
+
+      // Добавляем обработчик события для каждого чекбокса
+      categoryCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateProducts);
+      });
+
+      // Знаходимо кнопку "Скинути фільтри"
+      const resetFiltersButton = document.querySelector('.hide-filters.btn-reset');
+
+      // Додаємо обробник події для кнопки
+      resetFiltersButton.addEventListener('click', () => {
+        // Скидуємо всі вибрані чекбокси категорій
+        categoryCheckboxes.forEach(checkbox => {
+          checkbox.checked = false;
+        });
+        // Отображаем все продукты
+        productsArr.forEach(product => {
+          product.style.display = 'flex';
+        });
+      });
+
+
+      // Функция для обновления отображаемых товаров в зависимости от выбранных категорий
+      function updateProducts() {
+        // Получаем выбранные категории
+        const selectedCategories = Array.from(categoryCheckboxes)
+          .filter(checkbox => checkbox.checked)
+          .map(checkbox => checkbox.parentElement.dataset.text);
+
+        // Перебираем все товары и скрываем/показываем их в зависимости от выбранных категорий
+        productsArr.forEach(product => {
+          const productCategory = product.dataset.category;
+
+          if (selectedCategories.length === 0 || selectedCategories.includes(productCategory)) {
+            product.style.display = 'flex';
+          } else {
+            product.style.display = 'none';
+          }
+        });
+      }
+
+      // Фільтруємо товары по категориям
+      const sortedProducts = Array.from(productsArr).sort((a, b) => {
+        const titleA = a.dataset.category.toUpperCase();
+        const titleB = b.dataset.category.toUpperCase();
+
+        if (titleA < titleB) {
+          return -1;
+        }
+        if (titleA > titleB) {
+          return 1;
+        }
+        return 0;
+      });
+
+      // Очищаем контейнер перед добавлением відфільтрованих товаров
+      productsContainer.innerHTML = '';
+
+      // Добавляем відфільтровані товари к контейнеру на странице
+      sortedProducts.forEach(product => {
+        productsContainer.appendChild(product);
+      });
+
+
+
+      // СОРТУВАННЯ ТОВАРІВ ПО ЦІНІ ТА НАЗВІ
+
+      // Фільтруємо товари по ціні
+      const sortProductsByPrice = () => {
+        // Отримуємо значення вибору з селектора
+        const selectedValue = sortSelect.value;
+
+        if (selectedValue === 'name') {
+          // Очищаем контейнер перед добавлением відфільтрованих товаров
+          productsContainer.innerHTML = '';
+
+          // Добавляем відфільтровані товари к контейнеру на странице
+          sortedProducts.forEach(product => {
+            productsContainer.appendChild(product);
+          });
+        }
+
+        // Якщо вибрано опцію "Спочатку дешевші" або "Спочатку дорожчі"
+        if (selectedValue === 'cheap' || selectedValue === 'expensive') {
+          // Створюємо копію масиву товарів для сортування
+          const sortedProducts = Array.from(productsArr);
+
+          // Сортуємо товари за ціною
+          sortedProducts.sort((a, b) => {
+            const priceA = parseFloat(a.querySelector('p').textContent.split(' ')[1]);
+            const priceB = parseFloat(b.querySelector('p').textContent.split(' ')[1]);
+
+            return selectedValue === 'cheap' ? priceA - priceB : priceB - priceA;
+          });
+
+          // Очищаємо контейнер перед додаванням відсортованих товарів
+          productsContainer.innerHTML = '';
+
+          // Додаємо відсортовані товари до контейнеру на сторінці
+          sortedProducts.forEach(product => {
+            productsContainer.appendChild(product);
+          });
+        }
+      };
+
+      // Додаємо обробник подій для селектора
+      sortSelect.addEventListener('change', sortProductsByPrice);
+
+    });
+  });
+
+  // Отримуємо кошик з локального сховища при завантаженні сторінки
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // Функція для зміни кількості колонок та стилів
+  function changeColumns(columns) {
+    // Змінюємо стиль grid-template-columns відповідно до нової кількості колонок
+    productsContainer.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+
+    // Очищаємо контейнер перед зміною кількості колонок
+    productsContainer.innerHTML = "";
+
+    // Проходимось по кожному товару і створюємо HTML-елемент для відображення
+    products.forEach(product => {
+      const productElement = document.createElement("div");
+      productElement.classList.add("product");
+      productElement.dataset.category = product.name;
+
+      // Додаємо обробник подій для кожного товару
+      productElement.addEventListener("click", function () {
+        // Очищаємо контейнер перед виведенням деталей нового товару
+        productDetailsContainer.innerHTML = "";
+
+        // Створюємо елементи для відображення деталей товару
+        const titleElement = document.createElement("h2");
+        titleElement.textContent = product.title;
+
+        const priceElement = document.createElement("p");
+        priceElement.textContent = `Price: ${product.price.toFixed(2)} USD`;
+
+        const imageElement = document.createElement("img");
+        imageElement.src = product.image;
+        imageElement.alt = product.title;
+
+        const infoElement = document.createElement("p");
+        infoElement.textContent = product.info;
+
+        // Додаємо можливість зміни кольору товару
+        // Створюємо список для вибору кольорів
+        const colorSelect = document.createElement("select");
+        colorSelect.innerHTML = "<option value='' selected disabled>Choose a color</option>";
+        colorSelect.style.marginBottom = "10px";
+        colorSelect.style.marginRight = "10px";
+
+        // Додаємо кожен доступний колір до списку
+        Object.keys(product.colors).forEach(color => {
+          const option = document.createElement("option");
+          option.value = color;
+          option.text = color;
+          colorSelect.appendChild(option);
+        });
+
+        // Додаємо обробник подій до списку вибору кольору
+        colorSelect.addEventListener("change", function () {
+          // Отримуємо вибраний колір
+          const selectedColor = colorSelect.value;
+
+          // Отримуємо відповідну картинку для вибраного кольору
+
+          const selectedImage = product.colors[selectedColor];
+          imageElement.src = selectedImage;
+
+
+          // Змінюємо шлях картинки товару
+          imageElement.src = selectedImage;
+
+          console.log("Selected color:", selectedColor);
+        });
+
+        
+
+        const butElement = document.createElement("button");
+        butElement.innerText = "Add to basket";
+
+
+        // додаємо обробник подій до кнопки "додати в кошик"
+        butElement.addEventListener("click", function () {
+          const cartItem = {
+            title: product.title,
+            price: product.price,
+            image: product.image,
+            // інші властивості товару, які вам потрібні
+          };
+
+          // Додаємо товар до кошика
+          cart.push(cartItem);
+
+          // Зберігаємо оновлений кошик в локальному сховищі
+          localStorage.setItem("cart", JSON.stringify(cart));
+
+          console.log("Товар додано в кошик")
+          console.log(cartItem)
+
+          const messange = document.createElement('div');
+          messange.innerText = "Product added";
+          productDetailsContainer.append(messange);
+        });
+
+
+        // Додаємо створені елементи до контейнера деталей товару
+        productDetailsContainer.appendChild(titleElement);
+        productDetailsContainer.appendChild(priceElement);
+        productDetailsContainer.appendChild(imageElement);
+        productDetailsContainer.appendChild(infoElement);
+        // Додаємо список вибору кольорів до контейнера деталей товару
+        productDetailsContainer.appendChild(colorSelect);
+        productDetailsContainer.appendChild(butElement);
+
+        // Додаємо кнопку для закриття вікна
+        const closeButton = document.createElement("button");
+        closeButton.innerText = "Close";
+        closeButton.style.margin = "10px";
+        closeButton.addEventListener("click", function () {
+          // Очищаємо контейнер для закриття вікна
+          productDetailsContainer.innerHTML = "";
+        });
+
+        // Додаємо кнопку для закриття вікна до контейнера деталей товару
+        productDetailsContainer.appendChild(closeButton);
+
+        // Прокручуємо сторінку, щоб вікно було видимим
+        productDetailsContainer.scrollIntoView({ behavior: "smooth" });
+
+      });
+
+      // Создаем элементы для отображения информации о товаре
+      const titleElement = document.createElement("h3");
+      titleElement.textContent = product.title;
+      titleElement.style.marginBottom = "0";
+
+      const priceElement = document.createElement("p");
+      priceElement.textContent = `Price: ${product.price.toFixed(2)} USD`;
+
+      const imageElement = document.createElement("img");
+      imageElement.src = product.image;
+      imageElement.classList.add("product__image");
+      imageElement.alt = product.title;
+      imageElement.style.width = "100px";
+      imageElement.style.height = "100px";
+      imageElement.style.marginInline = "10px";
+      imageElement.style.marginBottom = "30px";
+
+      // Добавляем созданные элементы к элементу товара
+      productElement.appendChild(titleElement);
+      productElement.appendChild(priceElement);
+      productElement.appendChild(imageElement);
+
+      // Додаємо створений елемент товару до контейнера на сторінці
+      productsContainer.appendChild(productElement);
+    });
+  }
+
+  // Викликаємо функцію для ініціалізації з поточною кількістю колонок
+  changeColumns(currentColumns);
+
+
+  // Получаем все чекбоксы категорий
+  const categoryCheckboxes = document.querySelectorAll('.custom-checkbox__input');
+
+  // Получаем все товары
+  const productsArr = document.querySelectorAll('.product');
+
+
+  // Добавляем обработчик события для каждого чекбокса
+  categoryCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', updateProducts);
+  });
+
+  // Знаходимо кнопку "Скинути фільтри"
+  const resetFiltersButton = document.querySelector('.hide-filters.btn-reset');
+
+  // Додаємо обробник події для кнопки
+  resetFiltersButton.addEventListener('click', () => {
+    // Скидуємо всі вибрані чекбокси категорій
+    categoryCheckboxes.forEach(checkbox => {
+      checkbox.checked = false;
+    });
+    // Отображаем все продукты
+    productsArr.forEach(product => {
+      product.style.display = 'flex';
+    });
+  });
+
+  // Функция для обновления отображаемых товаров в зависимости от выбранных категорий
+  function updateProducts() {
+    // Получаем выбранные категории
+    const selectedCategories = Array.from(categoryCheckboxes)
+      .filter(checkbox => checkbox.checked)
+      .map(checkbox => checkbox.parentElement.dataset.text);
+
+    // Перебираем все товары и скрываем/показываем их в зависимости от выбранных категорий
+    productsArr.forEach(product => {
+      const productCategory = product.dataset.category;
+
+      if (selectedCategories.length === 0 || selectedCategories.includes(productCategory)) {
+        product.style.display = 'flex';
+      } else {
+        product.style.display = 'none';
+      }
+    });
+  }
+
+  // Фільтруємо товары по категориям
+  const sortedProducts = Array.from(productsArr).sort((a, b) => {
+    const titleA = a.dataset.category.toUpperCase();
+    const titleB = b.dataset.category.toUpperCase();
+
+    if (titleA < titleB) {
+      return -1;
+    }
+    if (titleA > titleB) {
+      return 1;
+    }
+    return 0;
+  });
+
+  // Очищаем контейнер перед добавлением відфільтрованих товаров
+  productsContainer.innerHTML = '';
+
+  // Добавляем відфільтровані товари к контейнеру на странице
+  sortedProducts.forEach(product => {
+    productsContainer.appendChild(product);
+  });
+
+
+
+  // СОРТУВАННЯ ТОВАРІВ ПО ЦІНІ ТА НАЗВІ
+
+  // Фільтруємо товари по ціні
+  const sortProductsByPrice = () => {
+    // Отримуємо значення вибору з селектора
+    const selectedValue = sortSelect.value;
+
+    if (selectedValue === 'name') {
+      // Очищаем контейнер перед добавлением відфільтрованих товаров
+      productsContainer.innerHTML = '';
+
+      // Добавляем відфільтровані товари к контейнеру на странице
+      sortedProducts.forEach(product => {
+        productsContainer.appendChild(product);
+      });
+    }
+
+    // Якщо вибрано опцію "Спочатку дешевші" або "Спочатку дорожчі"
+    if (selectedValue === 'cheap' || selectedValue === 'expensive') {
+      // Створюємо копію масиву товарів для сортування
+      const sortedProducts = Array.from(productsArr);
+
+      // Сортуємо товари за ціною
+      sortedProducts.sort((a, b) => {
+        const priceA = parseFloat(a.querySelector('p').textContent.split(' ')[1]);
+        const priceB = parseFloat(b.querySelector('p').textContent.split(' ')[1]);
+
+        return selectedValue === 'cheap' ? priceA - priceB : priceB - priceA;
+      });
+
+      // Очищаємо контейнер перед додаванням відсортованих товарів
+      productsContainer.innerHTML = '';
+
+      // Додаємо відсортовані товари до контейнеру на сторінці
+      sortedProducts.forEach(product => {
+        productsContainer.appendChild(product);
+      });
+    }
+  };
+
+  // Додаємо обробник подій для селектора
+  sortSelect.addEventListener('change', sortProductsByPrice);
+
+
+</script>

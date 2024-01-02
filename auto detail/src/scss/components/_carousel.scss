@@ -1,0 +1,45 @@
+.carousel {
+    overflow: hidden;
+    width: 100%; /* Задайте ширину каруселі відносно ширини екрану */
+    height: 100vh; /* Задайте висоту каруселі відносно висоти екрану */
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-container {
+    margin-top: 24px;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* Задайте ширину карусельного контейнера відносно ширини екрану та кількості слайдів */
+}
+
+.carousel-item {
+    flex: 1;
+    width: 100vw; /* Задайте ширину слайдів відносно ширини екрану */
+}
+
+.carousel-img {
+    border-radius: 13px;
+    width: 100%; /* Забезпечте, щоб зображення в слайді було на всю ширину слайду */
+    height: 100%; /* Забезпечте, щоб зображення в слайді було на всю висоту слайду */
+    object-fit: cover; /* Забезпечте, щоб картинка повністю вмістилася в область зображення */
+}
+
+.carousel-dots {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-inline: 15px;
+    background-color: darkgray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #9C1F2D;
+}
