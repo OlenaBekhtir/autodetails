@@ -1,4 +1,6 @@
 .nav {
+display: flex;
+
   &__list {
     display: flex;
     background-color:  #9C1F2D;
@@ -59,11 +61,9 @@
 }
 
 .logo {
-  // position: absolute;
-  // top: 5%;
-  // left: 5%;
   width: 70px;
   text-align: left;
+  margin-right: 10px;
 
   &__img {
     border-radius: 50%;

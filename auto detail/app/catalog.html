@@ -7,8 +7,9 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>3D models</title>
+  <title>AutoDetail</title>
   <link rel="stylesheet" href="css/main.min.css">
+  <link rel="shortcut icon" href="./img/logo.jpg" type="image/x-icon">
   <style>
     .catalog {
       margin-top: 100px;
@@ -21,6 +22,7 @@
 </head>
 
 <body>
+
   <body>
     <div class="site-container">
       <header class="header">
@@ -30,12 +32,13 @@
           </button>
           <nav class="nav header__nav">
             <a href="./index.html" class="logo" aria-label="logo">
-              <img class="logo__img" src="./img/logo.jpg" alt="logo"/>
+              <img class="logo__img" src="./img/logo.jpg" alt="logo" />
             </a>
             <ul class="nav__list">
               <li class="nav__item"><a href="./index.html" class="main-link nav__link-home">Головна</a>
               </li>
-              <li class="nav__item"><a href="./catalog.html" class="main-link nav__link-home nav__link--current">Каталог</a></li>
+              <li class="nav__item"><a href="./catalog.html"
+                  class="main-link nav__link-home nav__link--current">Каталог</a></li>
               <li class="nav__item"><a href="./basket.html" class="main-link nav__link nav__link-home">Корзина</a></li>
             </ul>
             <button class="nav__close btn-reset">close</button>
@@ -58,11 +61,11 @@
         </div>
       </header>
 
-  <main class="main">
-    <section class="catalog">
-      <div class="catalog-content">
-        <div class="container container-narrow">
-          <div class="catalog-filters">
+      <main class="main">
+        <section class="catalog">
+          <div class="catalog-content">
+            <div class="container container-narrow">
+              <div class="catalog-filters">
   <button class="hide-filters btn-reset">Скинути фільтри</button>
   <div class="catalog-filter catalog-filter--open">
     <div class="catalog-filter__top">
@@ -109,7 +112,7 @@
           </label>
         </li>
         <li class="catalog-filter__item">
-          <label class="custom-checkbox" data-text="Додаткове обладення">
+          <label class="custom-checkbox" data-text="Додаткове обладнання">
             <input type="checkbox" class="custom-checkbox__input visually-hidden">
             <span class="custom-checkbox__text">Додаткове обладнання</span>
           </label>
@@ -132,32 +135,44 @@
 </div>
 
 
-          <div id="product-details"></div>
+              <div id="product-details"></div>
 
-          <div class="catalog-grid">
-            <div class="catalog-grid__props catalog-props">
-              <div class="catalog-props__top">
-                <button class="btn-reset catalog-mobile-filters">
-                  <svg height="394pt" viewBox="-5 0 394 394.00003" width="394pt" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="m367.820312 0h-351.261718c-6.199219-.0117188-11.878906 3.449219-14.710938 8.960938-2.871094 5.585937-2.367187 12.3125 1.300782 17.414062l128.6875 181.285156c.042968.0625.089843.121094.132812.183594 4.675781 6.3125 7.207031 13.960938 7.21875 21.816406v147.800782c-.027344 4.375 1.691406 8.582031 4.773438 11.6875 3.085937 3.101562 7.28125 4.851562 11.65625 4.851562 2.222656-.003906 4.425781-.445312 6.480468-1.300781l72.3125-27.570313c6.476563-1.980468 10.777344-8.09375 10.777344-15.453125v-120.015625c.011719-7.855468 2.542969-15.503906 7.214844-21.816406.042968-.0625.089844-.121094.132812-.183594l128.691406-181.289062c3.667969-5.097656 4.171876-11.820313 1.300782-17.40625-2.828125-5.515625-8.511719-8.9765628-14.707032-8.964844zm0 0" />
-                  </svg>
-                  <span>Filters</span>
-                </button>
-                
-                <select class="custom-select" id="sortSelect">
-                  <option class="custom-select__item" value="cheap">Оберіть сортування</option>
-                  <option class="custom-select__item" value="cheap">Спочатку дешевші</option>
-                  <option class="custom-select__item" value="expensive">Спочатку дорожчі</option>
-                </select>
+              <div class="catalog-grid">
+                <div class="catalog-grid__props catalog-props">
+                  <div class="catalog-props__top">
+                    <button class="btn-reset catalog-mobile-filters">
+                      <svg height="394pt" viewBox="-5 0 394 394.00003" width="394pt" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="m367.820312 0h-351.261718c-6.199219-.0117188-11.878906 3.449219-14.710938 8.960938-2.871094 5.585937-2.367187 12.3125 1.300782 17.414062l128.6875 181.285156c.042968.0625.089843.121094.132812.183594 4.675781 6.3125 7.207031 13.960938 7.21875 21.816406v147.800782c-.027344 4.375 1.691406 8.582031 4.773438 11.6875 3.085937 3.101562 7.28125 4.851562 11.65625 4.851562 2.222656-.003906 4.425781-.445312 6.480468-1.300781l72.3125-27.570313c6.476563-1.980468 10.777344-8.09375 10.777344-15.453125v-120.015625c.011719-7.855468 2.542969-15.503906 7.214844-21.816406.042968-.0625.089844-.121094.132812-.183594l128.691406-181.289062c3.667969-5.097656 4.171876-11.820313 1.300782-17.40625-2.828125-5.515625-8.511719-8.9765628-14.707032-8.964844zm0 0" />
+                      </svg>
+                      <span>Filters</span>
+                    </button>
 
-              </div>
-              <div class="catalog-props__choice catalog-choice">
-                <button class="btn-reset catalog-choice__clear">Очистити</button>
-              </div>
+                    <div class="catalog-props__columns catalog-columns">
+                      <span class="catalog-columns__text">Кількість колонок:</span>
+                      <ul class="catalog-columns__list">
+                        <li class="catalog-columns__item"><button class="btn-reset main-link catalog-columns__btn"
+                            data-columns="3">3</button></li>
+                        <li class="catalog-columns__item"><button
+                            class="btn-reset main-link catalog-columns__btn catalog-columns__btn--current"
+                            data-columns="4">4</button>
+                        </li>
+                      </ul>
+                    </div>
 
-              <div id="products-container" class="catalog-grid__content"></div>
-              <script>
+                    <select class="custom-select" id="sortSelect">
+                      <option class="custom-select__item" value="cheap">Оберіть сортування</option>
+                      <option class="custom-select__item" value="cheap">Спочатку дешевші</option>
+                      <option class="custom-select__item" value="expensive">Спочатку дорожчі</option>
+                    </select>
+
+                  </div>
+                  <div class="catalog-props__choice catalog-choice">
+                    <button class="btn-reset catalog-choice__clear">Очистити</button>
+                  </div>
+
+                  <div id="products-container" class="catalog-grid__content"></div>
+                  <script>
 
   // Список товарів
 
@@ -165,399 +180,433 @@
     {
       "name": "Запчастини",
       "title": "Амортизатор газовий",
-      "price": 10.00,
-      "image": "./img/keycap_prod1.jpg",
-      "info": "MX cherry keycap tank form Metal Slug, DESIGN NUMBER	578558, 3D MODEL SIZE	X 17 × Y 17.5 × Z 18.7 mm",
+      "price": 560.00,
+      "image": "./img/zap_prod1.jpg",
+      "info": "Виробник DACO, амортизатор газовий",
       colors: {
-        "grey": "./img/keycap_prod1_grey.jpg",
-        "black": "./img/keycap_prod1_black.jpg",
+        "561701": "./img/zap_prod1_1.jpg",
+        "560401": "./img/zap_prod1_2.jpg",
+        "560706": "./img/zap_prod1_3.jpg"
       }
     },
     {
       "name": "Запчастини",
       "title": "Амортизатор масляний",
-      "price": 12.00,
-      "image": "./img/keycap_prod2.jpg",
-      "info": "CATSKULL HALLOWEEN KEYCAP - MECHANICAL KEYBOARD, DESIGN NUMBER	1495087",
+      "price": 800.00,
+      "image": "./img/zap_prod2.jpg",
+      "info": "Виробник DACO, амортизатор масляний",
       colors: {
-        "black": "./img/keycap_prod2_black.jpg",
-        "violet": "./img/keycap_prod2_violet.jpg",
+        "533960": "./img/zap_prod2_1.jpg",
+        "413612": "./img/zap_prod2_2.jpg",
+        "533976": "./img/zap_prod2_3.jpg"
       }
     },
     {
       "name": "Запчастини",
       "title": "Амортизатор газомасляний",
-      "price": 15.00,
-      "image": "./img/keycap_prod3_black.jpg",
-      "info": "Small project in the weekend. Amazed by the Ender Printed with 0.4 nozzle, DESIGN NUMBER	310627",
+      "price": 750.00,
+      "image": "./img/zap_prod3.jpg",
+      "info": "Амортизатор газомасляний зад. лп",
       colors: {
-        "grey": "./img/keycap_prod3.jpg",
-        "blue": "./img/keycap_prod3_blue.jpg"
+        "533960G": "./img/zap_prod3_1.jpg",
+        "J5500900G": "./img/zap_prod3_2.jpg",
+        "5521030G": "./img/zap_prod3_3.jpg"
       }
     },
     {
       "name": "Запчастини",
       "title": "Кріплення (болти)",
-      "price": 18.00,
-      "image": "./img/keycap_prod4.jpg",
-      "info": "PUPPY CORGI KEYCAPS - MECHANICAL KEYBOARD, DESIGN NUMBER	1175802, This design is separated into 2 parts that form this cute corgi: a keycap is his head another keycap is her cute",
+      "price": 48.00,
+      "image": "./img/zap_prod4.jpg",
+      "info": "Болт колісний, зовнішній шестигранник, для переднього та заднього моста",
       colors: {
-        "orange": "./img/keycap_prod4_orange.jpg",
-        "beige": "./img/keycap_prod4_beige.jpg"
+        "FEBIM12D40": "./img/zap_prod4_1.jpg",
+        "FEBIM12D48": "./img/zap_prod4_2.jpg"
       }
     },
     {
       "name": "Запчастини",
-      "title": "Кріплення (кліпси, фікстори)",
+      "title": "Кріплення (кліпси, фіксатори)",
       "price": 20.00,
-      "image": "./img/keycap_prod5.jpg",
-      "info": "EVANGELION UNIT-01, 02 KEYCAPS - MECHANICAL KEYBOARD, DESIGN NUMBER	1562109, You can paint them according to their different versions seen in the anime.",
+      "image": "./img/zap_prod5.jpg",
+      "info": "Кріплення розпорної дії",
       colors: {
-        "violet": "./img/keycap_prod5_violet.jpg",
-        "red": "./img/keycap_prod5_red.jpg"
+        "MAK11217": "./img/zap_prod5_1.jpg",
+        "MAK11831": "./img/zap_prod5_2.jpg",
+        "MAK11230": "./img/zap_prod5_3.jpg"
       }
     },
     {
       "name": "Запчастини",
       "title": "Кріплення (хомути)",
-      "price": 5.00,
-      "image": "./img/sewing_prod1.jpg",
-      "info": "THIMBLE, DESIGN NUMBER	623371, Six Beautiful Thimbles. Take care of your fingers",
+      "price": 45.00,
+      "image": "./img/zap_prod6.jpg",
+      "info": "Хомут товстостінний Розмір G8 сталевий",
       colors: {
-        "red": "./img/sewing_prod1_red.jpg",
-        "green": "./img/sewing_prod1_green.jpg",
-        "blue": "./img/sewing_prod1_blue.jpg",
+        "BOTTARI": "./img/zap_prod6_1.jpg",
+        "Carlife": "./img/zap_prod6_2.jpg",
+        "MAGNETI": "./img/zap_prod6_3.jpg",
       }
     },
     {
       "name": "Запчастини",
       "title": "Ремінний привід (ремені ГРМ)",
-      "price": 8.00,
-      "image": "./img/sewing_prod2.jpg",
-      "info": "THIMBLE WITH SEWING MACHINE, DESIGN NUMBER	315404, made it in two parts and then pasted it",
+      "price": 450.00,
+      "image": "./img/zap_prod7.jpg",
+      "info": "Ремні ГРМ виробляється з використанням гуми. Саме тому ремінні мотори працюють набагато тихіше, ніж ланцюгові",
       colors: {
-        "black": "./img/sewing_prod2_black.jpg",
-        "blue": "./img/sewing_prod2_blue.jpg",
+        "FLENNOR": "./img/zap_prod7_1.jpg",
+        "CONTITECH": "./img/zap_prod7_2.jpg",
+        "GATES": "./img/zap_prod7_3.jpg"
       }
     },
     {
       "name": "Запчастини",
       "title": "Ремінний привід (ремені клинові)",
-      "price": 95.00,
-      "image": "./img/sewing_prod3.jpg",
-      "info": "BARBIE SEWING BUST, DESIGN NUMBER	266525,Barbie sewing bust, on a 4 foot pedestal. the bust is connected to the pedestal by a 6mm diameter brass bar dimensions: shoulder width 44mm width at the chest: 30.5 mm bust height: 92mm",
+      "price": 105.00,
+      "image": "./img/zap_prod8.jpg",
+      "info": "Приводні ремені клинові складаються з щільної гуми, що має особливий склад. Вони застосовуються в конструкції автомобілів, щоб приводити в дію допоміжні агрегати",
       colors: {
-        "grey": "./img/sewing_prod3_grey.jpg",
-        "beige": "./img/sewing_prod3.jpg",
+        "A5295": "./img/zap_prod8_1.jpg",
+        "119X876LD": "./img/zap_prod8_2.jpg",
+        "3AVX13X2360": "./img/zap_prod8_3.jpg"
       }
     },
     {
       "name": "Запчастини",
       "title": "Ремінний привід (ремені струмкові)",
-      "price": 40.00,
-      "image": "./img/sewing_prod4.jpg",
-      "info": "KITTY KAT WOOL BOWL, DESIGN NUMBER	247990, The diameter is about: 166 mm the height is about 81.7 mm",
+      "price": 190.00,
+      "image": "./img/zap_prod9.jpg",
+      "info": "Струмковий або поліклиновий ремінь - виріб, який використовується для зв'язку колінвалу і навісного обладнання двигуна. Він має на внутрішній стороні так звані «клини» або «струмки» для поліпшення зчеплення шківів різних пристроїв",
       colors: {
-        "grey": "./img/sewing_prod4_grey.jpg",
-        "red": "./img/sewing_prod4_red.jpg",
-        "broun": "./img/sewing_prod4_broun.jpg",
+        "6PK0745": "./img/zap_prod9_1.jpg",
+        "4PK916ELAST": "./img/zap_prod9_2.jpg",
+        " 4PK890": "./img/zap_prod9_3.jpg",
       }
     },
     {
       "name": "Запчастини",
       "title": "Фільтри АКПП",
-      "price": 30.00,
-      "image": "./img/sewing_prod5.jpg",
-      "info": "KNITTED 3D PRINTED CONTAINERS, DESIGN NUMBER	854900, this is a set of 3D printed containers in which we can store wool, threads, etc. It looks like it's really made by knitting wool.",
+      "price": 1030.00,
+      "image": "./img/zap_prod10.jpg",
+      "info": "Масляний фільтр автомобіля",
       colors: {
-        "while": "./img/sewing_prod5_white.jpg",
-        "blue": "./img/sewing_prod5_blue.jpg",
+        "N1365000": "./img/zap_prod10_1.jpg",
+        "N1364000": "./img/zap_prod10_2.jpg",
+        "H182KIT": "./img/zap_prod10_3.jpg"
       }
     },
     {
       "name": "Запчастини",
       "title": "Фільтри повітряні",
-      "price": 45.00,
-      "image": "./img/benchy_prod1.jpg",
-      "info": "BEN THE FLOATING BENCHMARK (BENCHY), DESIGN NUMBER	21726",
+      "price": 97.00,
+      "image": "./img/zap_prod11.jpg",
+      "info": "Зовнішні характеристики повітряних фільтрів можуть значно відрізнятися, але принцип роботи завжди однаковий. Через спеціальний отвір повітряного автомобільного фільтра повітря потрапляє в корпус з фільтруючою системою. На ній осідає пил, а чисте повітря проходить далі, в колектор двигуна",
       "colors": {
-        "green": "./img/benchy_prod1_green.jpg",
-        "red": "",
+        "J1328033": "./img/zap_prod11_1.jpg",
+        "J1321061": "./img/zap_prod11_2.jpg",
+        "WA6395": "./img/zap_prod11_3.jpg"
       }
     },
     {
       "name": "Запчастини",
       "title": "Фільтри масляні",
-      "price": 47.00,
-      "image": "./img/benchy_prod2.jpg",
-      "info": "JUN - THE JUNGLE QUEEN, Into the jungle with JUN the Jungle Queen There is nothing more beautiful than an adventure. With Jun you can let your imaginative adventures run free. She swims in shallow waters, but the deep sea is not for Jun. Have fun exploring your own limits.",
+      "price": 96.00,
+      "image": "./img/zap_prod12.jpg",
+      "info": "масляний фільтр автомобіля потрібен для очищення оливи",
       "colors": {
-        "broun": "./img/benchy_prod2.jpg",
+        "DFO3000": "./img/zap_prod12_1.jpg",
+        "DFO3300": "./img/zap_prod12_2.jpg",
+        "044-OH": "./img/zap_prod12_3.jpg"
       }
     },
     {
       "name": "Диски",
       "title": "Диск колісний FIAT",
-      "price": 35.00,
-      "image": "./img/benchy_prod3.jpg",
-      "info": "BATHMAN, DESIGN NUMBER	145466, Mixed various files from thingiverse",
+      "price": 5000.00,
+      "image": "./img/disk_prod1.jpg",
+      "info": "диски WSP Italy з гарантією виробника виготовлені за стандартами ЄС для легкових автомашин",
       "colors": {
-        "beige": "./img/benchy_prod3.jpg",
-        "grey": "./img/benchy_prod3_grey.jpg",
+        "W142 USTICA": "./img/disk_prod1_1.jpg",
+        "W152 VERONA 7": "./img/disk_prod1_2.jpg",
+        "W152 VERONA": "./img/disk_prod1_3.jpg",
       }
     },
     {
       "name": "Диски",
       "title": "Диск колісний BMW",
-      "price": 50.00,
-      "image": "./img/benchy_prod4.jpg",
-      "info": "BOB THE PLUGGABLE, DESIGN NUMBER	22809, colored object that always looks better on children than a monochrome one. But since not everyone has a multicolor printer and they use a lot of material, I tried a different solution with BOB",
+      "price": 4500.00,
+      "image": "./img/disk_prod2.jpg",
+      "info": "Диск колісний BMW, Silver",
       "colors": {
-        "red-black": "./img/benchy_prod4_red_black.jpg",
-        "white-green": "./img/benchy_prod4_white_green.jpg",
+        "W650 Sofia": "./img/disk_prod2_1.jpg",
+        "W642 X5 SPACE": "./img/disk_prod2_2.jpg",
+        "W667 X5 Hotbird": "./img/disk_prod2_3.jpg",
       }
     },
     {
       "name": "Диски",
       "title": "Диск колісний MAZDA",
-      "price": 42.00,
-      "image": "./img/benchy_prod5.jpg",
-      "info": "EASY-PRINT BENCHY CHRISTMAS TREE HANGER, DESIGN NUMBER	148276,  This version has thinner hooks and a wedge-shaped peg that goes into the Benchy's chimney. The wedge adapts to varying interior diameters better than the round peg in the original design, and also prints cleaner. Enjoy!",
+      "price": 3900.00,
+      "image": "./img/disk_prod3.jpg",
+      "info": "Silver or black, Диск колісний MAZDA",
       "colors": {
-        "violet": "./img/benchy_prod5_violet.jpg",
-        "orange": "./img/benchy_prod5.jpg",
+        "W1903 MAGDEBURG": "./img/disk_prod3.jpg",
+        "W1904 HELLA": "./img/disk_prod3_1.jpg",
       }
     },
     {
       "name": "Диски",
       "title": "Диск колісний MERCEDES",
-      "price": 55.00,
-      "image": "./img/snakes_prod1.jpg",
-      "info": "ARTICULATED DRAGONAIR, DESIGN NUMBER	719360",
+      "price": 5065.00,
+      "image": "./img/disk_prod4.jpg",
+      "info": "Диск колісний MERCEDES, Виробник	WSP Italy",
       "colors": {
-        "blue": "./img/snakes_prod1_blue.jpg",
-        "broun": "./img/snakes_prod1_broun.jpg",
-        "grey": "./img/snakes_prod1_grey.jpg",
+        "W738 ELBA": "./img/disk_prod4_1.jpg",
+        "W765 ERIDA": "./img/disk_prod4_2.jpg",
+        "W737 MOSCA": "./img/disk_prod4_3.jpg",
       }
     },
     {
       "name": "Електрообладнання",
       "title": "Автолампа безцокольна",
-      "price": 57.00,
-      "image": "./img/snakes_prod2.jpg",
-      "info": "SNAKE SNAP-ON FLEXI, DESIGN NUMBER	240633, This snake snap on toy is printed separately and attaches in the order you desire. It come with two heads (male and female), 4 different body type designs, and 4 different tail designs.",
+      "price": 28.00,
+      "image": "./img/electro_prod1.jpg",
+      "info": "Автолампа Osram безцокольна",
       "colors": {
-        "orange": "./img/snakes_prod2.jpg",
-        "grey": "./img/snakes_prod2_grey.jpg",
+        "W2.3W 12V": "./img/electro_prod1_1.jpg",
+        "W21/5W": "./img/electro_prod1_2.jpg",
+        "W21W": "./img/electro_prod1_3.jpg",
       }
     },
     {
       "name": "Електрообладнання",
       "title": "Автолампа Osram P21W 12V",
-      "price": 95.00,
-      "image": "./img/snakes_prod3.jpg",
-      "info": "MAGIC SNAKE, ARTICULATED, PRINT-IN-PLACE, POSABLE, ANIMATED, FIXABLE, DESIGN NUMBER	953096",
+      "price": 32.00,
+      "image": "./img/electro_prod2.jpg",
+      "info": "P означає цоколь фланцевого типу",
       "colors": {
-        "green": "./img/snakes_prod3_green.jpg",
-        "blue": "./img/snakes_prod3_blue.jpg",
+        "BAY15d": "./img/electro_prod2_1.jpg",
+        "BAZ15d": "./img/electro_prod2_2.jpg",
+        "BAU15S orange": "./img/electro_prod2_3.jpg",
       }
     },
     {
       "name": "Електрообладнання",
       "title": "Акумулятор Bosch",
-      "price": 60.00,
-      "image": "./img/snakes_prod4.jpg",
-      "info": "NOSE-HORNED VIPER, DESIGN NUMBER	869073, the Nose-horned Viper is flexible model designed to feel like a real snake.",
+      "price": 3600.00,
+      "image": "./img/electro_prod3.jpg",
+      "info": "Ємність акумулятора та величина пускового струму. Ці характеристики у нового приладу повинні бути не меншими, ніж зазначені виробником в інструкції з експлуатації автомобіля. Перевищення більше, ніж на 5 А/год також небажано",
       "colors": {
-        "green-red": "./img/snakes_prod4_green.jpg",
+        "0092S40300": "./img/electro_prod3_1.jpg",
+        "0092S30060": "./img/electro_prod3_2.jpg",
+        "0092S40020": "./img/electro_prod3_3.jpg",
       }
     },
     {
       "name": "Електрообладнання",
       "title": "Акумулятор VARTA",
-      "price": 80.00,
-      "image": "./img/snakes_prod5.jpg",
-      "info": "THE APPLE AND THE SNAKE, ",
+      "price": 3400.00,
+      "image": "./img/electro_prod4.jpg",
+      "info": "Європейські, американські та вітчизняні авто використовують акумулятори європейського типу з утопленими контактами, які на деяких моделях закриваються кришкою. У автомобілях із країн Азії використовуються акумулятори азіатського типу, де клеми виступають над верхньою кришкою",
       "colors": {
-        "white": "./img/snakes_prod5_white.jpg",
-        "green-yellow": "./img/snakes_prod5_green-yellow.jpg",
+        "Silver Dynamic (C30)": "./img/electro_prod4_1.jpg",
+        "Blue Dynamic (D43)": "./img/electro_prod4_2.jpg",
+        "Blue Dynamic Asia (D48)": "./img/electro_prod4_3.jpg",
       }
     },
     {
       "name": "Електрообладнання",
       "title": "Генератор",
-      "price": 110.00,
-      "image": "./img/chess_prod1.jpg",
-      "info": "PURPLE MINION CHESS SET WITH HAIR FOR FDM PRINTERS, DESIGN NUMBER	280289",
+      "price": 6800.00,
+      "image": "./img/electro_prod5.jpg",
+      "info": "Основним завданням автомобільного генератора (електрична машина) є перетворення механічної енергії на електричний струм, що дозволяє заряджати акумулятор, що використовується для живлення електрообладнання, що застосовується в автомобілі",
       "colors": {
-        "blue-yellow": "./img/chess_prod1_blue.jpg",
+        "NIPPARTS J5110907": "./img/electro_prod5_1.jpg",
+        "DENSO DAN519": "./img/electro_prod5_2.jpg",
+        "AS A0190": "./img/electro_prod5_3.jpg"
       }
     },
     {
       "name": "Електрообладнання",
       "title": "Муфта генератора",
-      "price": 150.00,
-      "image": "./img/chess_prod2.jpg",
-      "info": "TABLERO PUZZLE AJEDREZ, DESIGN NUMBER	105273, the piezas de puzzle que forman un tablero de ajedrez.",
+      "price": 750.00,
+      "image": "./img/electro_prod6.jpg",
+      "info": "Головне призначення муфти генератора полягає в тому, щоб дозволяти генератору працювати або відключатися від приводу двигуна в залежності від обставин. Зазвичай це використовується для оптимізації ефективності пального споживання та зменшення навантаження на двигун.",
       "colors": {
-        "white-black": "./img/chess_prod2_white.jpg",
+        "AP9002": "./img/electro_prod6_1.jpg",
+        "AP9003": "./img/electro_prod6_2.jpg",
+        "AP9004": "./img/electro_prod6_3.jpg"
       }
     },
     {
       "name": "Електрообладнання",
       "title": "Стартер",
-      "price": 180.00,
-      "image": "./img/chess_prod3.jpg",
-      "info": "Wonder how Illuminati got control of the world ? They trained on the freemason chess! FREEMASON CHESS, DESIGN NUMBER	461652",
+      "price": 4200.00,
+      "image": "./img/electro_prod7.jpg",
+      "info": "При виборі пускового пристрою його характеристики повинні відповідати параметрам акумулятора та потужності двигуна. Найкраще підійде оригінальний або aftermarket стартер від виробників, які працюють на цю марку",
       "colors": {
-        "silve-gold": "./img/chess_prod3_silve.jpg",
+        "J5210510": "./img/electro_prod7_1.jpg",
+        "J5210905": "./img/electro_prod7_2.jpg",
+        "J5210908": "./img/electro_prod7_3.jpg"
       }
     },
     {
       "name": "Електрообладнання",
-      "title": "Автомобільна сап-шина",
-      "price": 175.00,
-      "image": "./img/chess_prod4.jpg",
-      "info": "You like strategy and even more when it's multiplayer? Go on and try Chaturanga 4 player ancient chess variant. CHESS 4 PLAYERS CHATURANGA, DESIGN NUMBER	539988",
+      "title": "Автомобільна can-шина",
+      "price": 475.00,
+      "image": "./img/electro_prod8.jpg",
+      "info": "Кан шина — это интерфейс, или система цифровой связи управления электрическими устройствами транспортного средства. Главной целью использования сети контроллеров является сбор, анализ и контроль данных, полученных со всех устройств, установленных на автомобиле",
       "colors": {
-        "4 colors": "./img/chess_prod4_4color.jpg",
+        "адаптер CAN": "./img/electro_prod8_1.jpg",
+        "CAN-UNI 01": "./img/electro_prod8_2.jpg",
+        "CAN-Bus": "./img/electro_prod8.jpg",
       }
     },
     {
       "name": "ЛФМ",
       "title": "Абразивні губки",
-      "price": 160.00,
-      "image": "./img/chess_prod5.jpg",
-      "info": "CHESS SET TOURNAMENT STYLE, DESIGN NUMBER	240154",
+      "price": 1600.00,
+      "image": "./img/lfm_prod1.jpg",
+      "info": "Залежно кількості граней абразивні губки виготовляються одно-, двух-, четырехсторонние, і навіть комбіновані. Вони можуть мати форму прямокутного бруска або серветки. Губки підходять для вологого та сухого полірування. За допомогою цього засобу можна швидко та якісно обробити лак, фарбу, шпаклівку, ґрунтовку.",
       "colors": {
-        "black-beige": "./img/chess_prod5_black_beige.jpg",
+        "ультратонкі": "./img/lfm_prod1_1.jpg",
+        "тонкі": "./img/lfm_prod1_2.jpg",
+        "SCOTCH-BRITE": "./img/lfm_prod1_3.jpg"
       }
     },
     {
       "name": "ЛФМ",
       "title": "Абразивні диски",
-      "price": 40.00,
-      "image": "./img/mate_prod1.jpg",
-      "info": "Due to popular demand we are sharing our Mate! It is necessary to use PETG since it has excellent layer adhesion and it is food safe. DESIGN NUMBER	25523",
+      "price": 2400.00,
+      "image": "./img/lfm_prod2.jpg",
+      "info": "Для надання гладкості металевої, дерев'яної або іншої поверхні використовують спеціальні пристрої, одними з яких є шліфувальні диски. Основні характеристики абразивних та наждачних кіл – це їх форма, розмір, шліфувальний матеріал, твердість, зернистість, точність. Вибирати такі матеріали потрібно в залежності від характеристик поверхні обробки та особливостей",
       "colors": {
-        "green": "./img/mate_prod1_green.jpg",
-        "red": "./img/mate_prod1.jpg"
+        "GR-DC 100X12": "./img/lfm_prod2.jpg",
+        "TRIZACT 1500 150": "./img/lfm_prod2_1.jpg",
+        "3М 268L": "./img/lfm_prod2_2.jpg"
       }
     },
     {
       "name": "ЛФМ",
       "title": "Абразивні листи",
-      "price": 60.00,
-      "image": "./img/mate_prod2.jpg",
-      "info": "MATE STICH CON CUERPO, 3D MODEL SIZE	X 170 × Y 104 × Z 133 mm, DESIGN NUMBER	178341",
+      "price": 1100.00,
+      "image": "./img/lfm_prod3.jpg",
+      "info": "Щоб відполірувати кузов або інші важкодоступні деталі, вам знадобляться абразивні листи. Цей матеріал - ідеальне і бюджетне рішення для всіх автомобілістів, які стежать за станом машин",
       "colors": {
-        "multicolor": "./img/mate_prod2.jpg",
+        "401Q Magic": "./img/lfm_prod3_1.jpg",
+        "Р120 HOOKIT": "./img/lfm_prod3_2.jpg",
+        "ВОДОСТІЙКІ 230Х280 ММ.": "./img/lfm_prod3_3.jpg"
       }
     },
     {
       "name": "ЛФМ",
       "title": "Абразивні рулони",
-      "price": 50.00,
-      "image": "./img/mate_prod3_main.jpg",
-      "info": "MATE HARRY POTTER, DESIGN NUMBER	199023, 3D MODEL SIZE	X 104 × Y 97.2 × Z 66.9 mm",
+      "price": 2850.00,
+      "image": "./img/lfm_prod4.jpg",
+      "info": "Основою абразивних матеріалів є поролон, папір або навіть тканина. Довжина одного рулону досягає 25 м, а зернистість варіюється від р40 до р600.",
       "colors": {
-        "multicolor": "./img/mate_prod3.jpg",
+        "МЯКИЙ (216U)": "./img/lfm_prod4_1.jpg",
+        "РУЛОНИ (255Р)": "./img/lfm_prod4_2.jpg",
+        "ПУРПУРОВИЙr": "./img/lfm_prod4_3.jpg"
       }
     },
     {
       "name": "ЛФМ",
       "title": "Антикорозійний матеріал для зовнішніх поверхонь",
-      "price": 45.00,
-      "image": "./img/mate_prod4.jpg",
-      "info": "MATE PELOTA DE FUTBOL, DESIGN NUMBER	180760, 3D MODEL SIZE	X 96 × Y 96 × Z 65.5 mm",
+      "price": 1145.00,
+      "image": "./img/lfm_prod5.jpg",
+      "info": "Механізм дії полягає у перешкоді контакту металевої поверхні з повітрям та вологою, що виключає проведення окисно-відновних реакцій. При обробці склад проникає в тріщини та пори, заповнюючи їх. На поверхні утворюється захисна плівка, яка захищає деталь зовнішніх факторів.",
       "colors": {
-        "black-white": "./img/mate_prod4.jpg",
+        "АНТИГРАВІЙНЕ ЧОРНE": "./img/lfm_prod5_1.jpg",
+        "ДЛЯ КУЗОВА (БІЛЕ)": "./img/lfm_prod5_2.jpg",
+        "СПРЕЙ (ЧОРНИЙ)": "./img/lfm_prod5_3.jpg"
       }
     },
     {
       "name": "ЛФМ",
       "title": "Антикорозійний матеріал для внутрішніх поверхонь",
-      "price": 45.00,
-      "image": "./img/mate_prod5.jpg",
-      "info": "MATE GASPAR (THE SIMPSONS), DESIGN NUMBER	200255, 3D MODEL SIZE	X 103 × Y 120 × Z 84 mm",
+      "price": 245.00,
+      "image": "./img/lfm_prod6.jpg",
+      "info": "Для захисту використовуються різні види антикору. Виробники пропонують автоаматорам антикорозійні засоби для зовнішніх та внутрішніх поверхонь",
       "colors": {
-        "multicolor": "./img/mate_prod5_multicolor.jpg",
+        "покриття PiTon Мовіль": "./img/lfm_prod6_1.jpg",
+        "Фарба аерозольна New Ton": "./img/lfm_prod6_2.jpg",
+        "Лак акриловий New Ton": "./img/lfm_prod6_3.jpg"
       }
     },
     {
       "name": "ЛФМ",
       "title": "Поліуретановий герметик",
-      "price": 25.00,
-      "image": "./img/helicopters_prod1.jpg",
-      "info": "PULL COPTER FINGER RING, DESIGN NUMBER	164383, Pull Copter Finger Ring that was designed to be printed on the tiny Fulcrum Minibot 3d printer with a buildvolume of only 7.5x7x7cm",
+      "price": 525.00,
+      "image": "./img/lfm_prod7.jpg",
+      "info": "Герметики використовуються для створення герметичного з'єднання між різними частинами автомобіля. Це дозволяє запобігти протіканню рідин, води, пилу чи інших забруднювачів у вузли або деталі автомобіля.",
       colors: {
-        "red": "./img/helicopters_prod1_red.jpg",
-        "orange": "./img/helicopters_prod1_orange.jpg",
-        "yellow": "./img/helicopters_prod1_yellow.jpg",
+        "ГЕРМЕТИК ЧОРНИЙ": "./img/lfm_prod7_1.jpg",
+        "ГЕРМЕТИК СІРИЙ": "./img/lfm_prod7_2.jpg",
+        "ГЕРМЕТИК БІЛИЙ": "./img/lfm_prod7.jpg",
       }
     },
     {
       "name": "ЛФМ",
       "title": "Пінакрилова двостороння клійка стрічка",
-      "price": 23.00,
-      "image": "./img/helicopters_prod2.jpg",
-      "info": "FLYING HELICOPTER TOY, DESIGN NUMBER	7823, Ode to the childhood flying toys - pull this helicopter;s tail and its rotors will fly high in the air",
+      "price": 1230.00,
+      "image": "./img/lfm_prod8.jpg",
+      "info": "Клейка стрічка з акрилового піноматеріалу з клейовим шаром з двох сторін, товщиною 1.1мм. Призначена для кріплення до кузовів автомобілів деталей з пластику (екстер'єру та інтер'єру): молдингів, вставок, ущільнювачів із EPDM, емблем, а також до скла – наприклад, приклеювання додаткового сигналу гальмування.",
       colors: {
-        "red": "./img/helicopters_prod2_red.jpg",
-        "yellow": "./img/helicopters_prod2_yellow.jpg",
+        "ЧОРНИЙ 12 ММ Х 20 М": "./img/lfm_prod8.jpg",
+        "3М PT 1100 F": "./img/lfm_prod8_1.jpg",
+        "PT1100": "./img/lfm_prod8_2.jpg"
       }
     },
     {
       "name": "ЛФМ",
       "title": "Клей епоксидний",
-      "price": 35.00,
-      "image": "./img/helicopters_prod3.jpg",
-      "info": "DWARF GYROBOMBER, DESIGN NUMBER	18145, GyroBomber with Connectors to make it interchangeable between a Copter and a Bomber without the use of glue. However, the engine parts will have to be printed separately and glued on still.",
-      colors: {
-        "pink-white": "./img/helicopters_prod3_pink_white.jpg",
-        "red-yellow": "./img/helicopters_prod3_red_yellow.jpg",
-        "red-broun": "./img/helicopters_prod3_red_broun.jpg",
+      "price": 95.00,
+      "image": "./img/lfm_prod9.jpg",
+      "info": "Призначення: для дерева, для кераміки, для метала, для пластика, для скла, універсальний. Основа: епоксидний Вид упаковки: тюбик",      colors: {
+        "WINSO прозорий 30г": "./img/lfm_prod9_1.jpg",
+        "WINSO сірий 30г": "./img/lfm_prod9_2.jpg"
       }
     },
     {
       "name": "ЛФМ",
       "title": "Фіксатор різьби",
-      "price": 66.00,
-      "image": "./img/helicopters_prod4.jpg",
-      "info": "BELL 206 HELICOPTER, DESIGN NUMBER	464177, Helicopter BELL 206 Long Ranger is a multipurpose helicopter developed by the American firm Bell Helicopter",
+      "price": 86.00,
+      "image": "./img/lfm_prod10.jpg",
+      "info": "Різьбові фіксатори мають особливий склад. Вони відносяться до анаеробних речовин, тобто мають здатність до твердіння на повітрі. Для проведення реакції не потрібні високі температури, склад перетворюється в тверду пластмасу при кімнатній",
       colors: {
-        "grey": "./img/helicopters_prod4_grey.jpg",
-        "white-green": "./img/helicopters_prod4.jpg",
-        "yellow-grey": "./img/helicopters_prod4_yellow_grey.jpg",
+        "WINSO червоний": "./img/lfm_prod10.jpg",
+        "WINSO синій": "./img/lfm_prod10_1.jpg",
+        "фіксатор гайок": "./img/lfm_prod10_2.jpg",
       }
     },
     {
       "name": "ЛФМ",
       "title": "Лак безкольоровий",
-      "price": 70.00,
-      "image": "./img/helicopters_prod5.jpg",
-      "info": "HELICUTE, DESIGN NUMBER	458770, A helicopter model that can be used for multiple purposes. suitable for production. Includes step and solidworks files",
+      "price": 1270.00,
+      "image": "./img/lfm_prod11.jpg",
+      "info": "Створює високоякісне прозоре покриття, стійке до утворення тріщин. Він призначений для покриття лаком великих та малих поверхонь. Високий блиск поверхні досягається після нанесення двох шарів лаку. Має чудову стійкість до впливів атмосферних умов.s",
       colors: {
-        "broun": "./img/helicopters_prod5_broun.jpg",
-        "grey": "./img/helicopters_prod5_grey.jpg",
-        "yellow": "./img/helicopters_prod5_yellow.jpg",
-        "blue": "./img/helicopters_prod5_blue.jpg",
-        "white-violet": "./img/helicopters_prod5.jpg",
+        "Прозорий лак HS": "./img/lfm_prod11.jpg",
+        "Superlack 2K МS": "./img/lfm_prod11_1.jpg",
+        "Maxiclear 2K HS": "./img/lfm_prod11_2.jpg",
       }
     },
     {
       "name": "ЛФМ",
       "title": "Знежирювач універсальний",
-      "price": 35.00,
-      "image": "./img/funko_prod1.jpg",
-      "info": "VEGETA FUNKO STYLO, DESIGN NUMBER	368406, 3D MODEL SIZE	X 58.8 × Y 52.4 × Z 100 mm",
+      "price": 357.00,
+      "image": "./img/lfm_prod12.jpg",
+      "info": "Знежирювачі використовуються для очищення різних металевих, пластикових та гумових деталей автомобіля. Вони можуть видаляти відкладення оливи, жиру, пилу та інших забруднювачів, що можуть утруднювати роботу механізмів",
       colors: {
-        "white": "./img/funko_prod1_white.jpg",
+        "ЗМ  08984": "./img/lfm_prod12.jpg",
+        "Quickline": "./img/lfm_prod12_1.jpg"
       }
     },
     {
-      "name": "Funko",
-      "title": "FUNKO POP",
+      "name": "Оливи",
+      "title": "Олива гідравлічна",
       "price": 30.00,
       "image": "./img/funko_prod2.jpg",
       "info": "FUNKO POP VALENTINO ROSSI, DESIGN NUMBER	195634, 3D MODEL SIZE	X 3.67 × Y 3.5 × Z 5.87 mm",
@@ -566,8 +615,8 @@
       }
     },
     {
-      "name": "Funko",
-      "title": "FUNKO JOKER",
+      "name": "Оливи",
+      "title": "Олива трансформаторна",
       "price": 25.00,
       "image": "./img/funko_prod3.jpg",
       "info": "FUNKO JOKER, DESIGN NUMBER	52408",
@@ -576,8 +625,8 @@
       }
     },
     {
-      "name": "Funko",
-      "title": "FUNKO YODALORIAN",
+      "name": "Оливи",
+      "title": "Олива моторна",
       "price": 40.00,
       "image": "./img/funko_prod4.jpg",
       "info": "THE YODALORIAN - FAN ART, DESIGN NUMBER	110406, make this new design of the mandalorian Gogu mandalorian its ready and optimized to print!",
@@ -587,8 +636,8 @@
       }
     },
     {
-      "name": "Funko",
-      "title": "FUNKO POKEMON",
+      "name": "Оливи",
+      "title": "Олива трансмісійна",
       "price": 45.00,
       "image": "./img/funko_prod5.jpg",
       "info": "PIKACHU POKEMON POKEMON FUNKO POP COLLECTION, DESIGN NUMBER	143650, X: Width Length: 75mm, Z: Depth Length: 48mm, Y: Height Length: 100mm",
@@ -598,8 +647,8 @@
       }
     },
     {
-      "name": "Playmobil",
-      "title": "PLAY DARTH",
+      "name": "Автохімія та аксесуари",
+      "title": "Автохімія для шин",
       "price": 50.00,
       "image": "./img/playmobil_prod1.jpg",
       "info": "DARTH VADER PLAYMOBIL, DESIGN NUMBER	80373, use Supports on head, body and arms.",
@@ -609,8 +658,8 @@
       }
     },
     {
-      "name": "Playmobil",
-      "title": "PLAY ARMCHAIRS",
+      "name": "Автохімія та аксесуари",
+      "title": "Автохімія для дисків",
       "price": 20.00,
       "image": "./img/playmobil_prod2.jpg",
       "info": "2 PLAYMOBIL ARMCHAIRS, DESIGN NUMBER	20350, armchair for playmobil or for small dolls with eagle decorations on the side and nothing simple for the other chair 7 cm high 4 cm wide and long",
@@ -620,8 +669,8 @@
       }
     },
     {
-      "name": "Playmobil",
-      "title": "PLAYGROUND SLIDE",
+      "name": "Автохімія та аксесуари",
+      "title": "Серветки",
       "price": 37.00,
       "image": "./img/playmobil_prod3.jpg",
       "info": "PLAYMOBIL PLAYGROUND SLIDE, DESIGN NUMBER	84166, This slide consists of several parts, but it is very easy to print and assemble!",
@@ -631,8 +680,8 @@
       }
     },
     {
-      "name": "Playmobil",
-      "title": "PLAY HORSE",
+      "name": "Автохімія та аксесуари",
+      "title": "Антифризи",
       "price": 20.00,
       "image": "./img/playmobil_prod4.jpg",
       "info": "ARTICULATED TOY HORSE, DESIGN NUMBER	90291, the head is articulated for up and down movement.",
@@ -642,8 +691,8 @@
       }
     },
     {
-      "name": "Playmobil",
-      "title": " PLAY BANK",
+      "name": "Автохімія та аксесуари",
+      "title": " Гальмівні рідини",
       "price": 60.00,
       "image": "./img/playmobil_prod5.jpg",
       "info": "PLAYMOBIL 1999 WESTERN NATIONAL BANK COACH DOOR SLIDE REPLACEMENT (NR 3037), DESIGN NUMBER	147404, 3D MODEL SIZE	X 28 × Y 6 × Z 9.9 mm",
@@ -652,8 +701,8 @@
       }
     },
     {
-      "name": "Landmarks",
-      "title": "LANDMARK EIFFEL TOWER",
+      "name": "Автохімія та аксесуари",
+      "title": "Очисник скла",
       "price": 50.00,
       "image": "./img/landmarks_prod1.jpg",
       "info": "Having a Paris based design studio, we absolutely needed an Eiffel Tower. So, why not making it big and orange, like le FabShop. Thanks to B9 creation, who had already designed one, we only had to use Netfabb to slice their model in 7 main components and glue them together with epoxy. It is our most impressive part.",
@@ -663,8 +712,8 @@
       }
     },
     {
-      "name": "Landmarks",
-      "title": "LANDMARK SPHINX",
+      "name": "Автохімія та аксесуари",
+      "title": "Очисник від комах",
       "price": 60.00,
       "image": "./img/landmarks_prod2.jpg",
       "info": "EGYPTIAN SPHINX, DESIGN NUMBER	86836",
@@ -674,8 +723,8 @@
       }
     },
     {
-      "name": "Landmarks",
-      "title": "LANDMARK BIGBEN",
+      "name": "Автохімія та аксесуари",
+      "title": "Очисник кондиціонера",
       "price": 55.00,
       "image": "./img/landmarks_prod3.jpg",
       "info": "BIG BEN, DESIGN NUMBER	13284, Big Ben is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London, and often extended to refer to the clock and the clock tower. The tower is officially known as the Elizabeth Tower, renamed as such to celebrate the Diamond Jubilee of Elizabeth II",
@@ -684,8 +733,8 @@
       }
     },
     {
-      "name": "Landmarks",
-      "title": "LANDMARK LIBERTY",
+      "name": "Додаткове обладнання",
+      "title": "Аптечка автомобільна",
       "price": 80.00,
       "image": "./img/landmarks_prod4.jpg",
       "info": "STATUE OF LIBERTY - REPAIRED, DESIGN NUMBER	40627, The amazing Statue of Liberty from New York! Amaze friends, family, teachers, and even pets with this awesome replica. It was printed from a flash forge printer from Kens Hub",
@@ -694,8 +743,8 @@
       }
     },
     {
-      "name": "Landmarks",
-      "title": "LANDMARK GIZA",
+      "name": "Додаткове обладнання",
+      "title": "Домкрат гідравлічний",
       "price": 85.00,
       "image": "./img/landmarks_prod5.jpg",
       "info": "THE GREAT PYRAMID OF GIZA, THE GREAT PYRAMID OF GIZA, What we know about Egypt's ancient civilization comes from what was left behind. Archaeologists scour the region for remnants to piece together pictures of the past, but some clues are hard to miss: at six and a half million ton, taller than the Statue of Liberty, and as wide as 10 football fields, the Great Pyramid of Giza can be seen from space.",
@@ -704,8 +753,8 @@
       }
     },
     {
-      "name": "Cosplay",
-      "title": "COSPLAY MAN",
+      "name": "Додаткове обладнання",
+      "title": "Каністра",
       "price": 180.00,
       "image": "./img/cosplay_prod1.jpg",
       "info": "IRON MAN MK6 MK 6 SUIT, DESIGN NUMBER	63998, It looks great, but it is NOT comfortable",
@@ -715,8 +764,8 @@
       }
     },
     {
-      "name": "Cosplay",
-      "title": "COSPLAY MASK",
+      "name": "Додаткове обладнання",
+      "title": "Ароматизатор",
       "price": 66.00,
       "image": "./img/cosplay_prod2.jpg",
       "info": "DOCTOR DOOM MASK, DESIGN NUMBER	40292, behold, a mask for burgeoning super-villain aspirations ",
@@ -726,8 +775,8 @@
       }
     },
     {
-      "name": "Cosplay",
-      "title": "COSPLAY CAT",
+      "name": "Системи очищення вікон",
+      "title": "Щітка склоочисника",
       "price": 57.00,
       "image": "./img/cosplay_prod3.jpg",
       "info": "SPLICER CAT MASK (BIOSHOCK), DESIGN NUMBER	20876, Love the power of vigors but afraid your fellow citizens of Rapture may not appreciate your thrilling new look? Well then have I got the mask for you",
@@ -737,8 +786,8 @@
       }
     },
     {
-      "name": "Cosplay",
-      "title": "COSPLAY SKYRIM",
+      "name": "Системи очищення вікон",
+      "title": "Механізм склоочисників",
       "price": 36.00,
       "image": "./img/cosplay_prod4.jpg",
       "info": "SKYRIM HEALTH AND MANA POTION (LESSER POTIONS) PROPS REPLICA, DESIGN NUMBER	42372, modeled in fusion from scratch, and photos from the game",
@@ -748,8 +797,8 @@
       }
     },
     {
-      "name": "Cosplay",
-      "title": "COSPLAY COMPASS",
+      "name": "Обладнання та інструменти",
+      "title": "Компресор",
       "price": 90.00,
       "image": "./img/cosplay_prod5.jpg",
       "info": "LINKLE'S COMPASS, DESIGN NUMBER	48443, A Linkle compass for cosplay/halloween.",
@@ -759,8 +808,8 @@
       }
     },
     {
-      "name": "Dragon",
-      "title": "DRAGON BALL",
+      "name": "Обладнання та інструменти",
+      "title": "Генератор бензиновий",
       "price": 55.00,
       "image": "./img/dragon_prod1.jpg",
       "info": "KORIN - DRAGON BALL, DESIGN NUMBER	33260, Korin the immortal cat from Dragon Ball",
@@ -770,49 +819,14 @@
       }
     },
     {
-      "name": "Dragon",
-      "title": "DRAGON VEGETA",
+      "name": "Обладнання та інструменти",
+      "title": "Дриль",
       "price": 82.00,
       "image": "./img/dragon_prod2.jpg",
       "info": "VEGETA - DRAGONBALL 3D PRINT MODEL 3D PRINT MODEL, DESIGN NUMBER	31086",
       colors: {
         "blue-yellow": "./img/dragon_prod2_blue_yellow.jpg",
         "bronze": "./img/dragon_prod2_bronze.jpg",
-      }
-    },
-    {
-      "name": "Dragon",
-      "title": "DRAGON BALL",
-      "price": 80.00,
-      "image": "./img/dragon_prod3.jpg",
-      "info": "DRAGON ON THE CRYSTAL BALL, DESIGN NUMBER	4956",
-      colors: {
-        "grey-yellow": "./img/dragon_prod3_grey_yellow.jpg",
-        "beige": "./img/dragon_prod3_beige.jpg",
-      }
-    },
-    {
-      "name": "Dragon",
-      "title": "DRAGON GOKU",
-      "price": 73.00,
-      "image": "./img/dragon_prod4.jpg",
-      "info": "OOZARU - GOKU - DRAGONBALL, DESIGN NUMBER	27004, Kong Oozaru style in dragonball",
-      colors: {
-        "yellow": "./img/dragon_prod4_yellow.jpg",
-        "beige": "./img/dragon_prod4_beige.jpg",
-        "white": "./img/dragon_prod4_white.jpg",
-      }
-    },
-    {
-      "name": "Dragon",
-      "title": "DRAGON TOPPO",
-      "price": 65.00,
-      "image": "./img/dragon_prod5.jpg",
-      "info": "TOPPO STL - DRAGON BALL SUPER - 3D PRINT MODEL, DESIGN NUMBER	27740, The model measures: Width : 179 mm, Height: 270 mm, Depth : 121 mm",
-      colors: {
-        "silver": "./img/dragon_prod5_silver.jpg",
-        "beige": "./img/dragon_prod5_bronze.jpg",
-        "grey": "./img/dragon_prod5_grey.jpg",
       }
     },
   ]
@@ -876,6 +890,7 @@
         productsArr.forEach(product => {
           product.style.display = 'flex';
         });
+        console.log("фільтри скинуті")
       });
 
 
@@ -995,7 +1010,7 @@
         titleElement.textContent = product.title;
 
         const priceElement = document.createElement("p");
-        priceElement.textContent = `Price: ${product.price.toFixed(2)} USD`;
+        priceElement.textContent = `Price: ${product.price.toFixed(2)} грн.`;
 
         const imageElement = document.createElement("img");
         imageElement.src = product.image;
@@ -1007,7 +1022,7 @@
         // Додаємо можливість зміни кольору товару
         // Створюємо список для вибору кольорів
         const colorSelect = document.createElement("select");
-        colorSelect.innerHTML = "<option value='' selected disabled>Choose a color</option>";
+        colorSelect.innerHTML = "<option value='' selected disabled>оберіть модель</option>";
         colorSelect.style.marginBottom = "10px";
         colorSelect.style.marginRight = "10px";
 
@@ -1039,7 +1054,7 @@
         
 
         const butElement = document.createElement("button");
-        butElement.innerText = "Add to basket";
+        butElement.innerText = "Додати в кошик";
 
 
         // додаємо обробник подій до кнопки "додати в кошик"
@@ -1061,7 +1076,7 @@
           console.log(cartItem)
 
           const messange = document.createElement('div');
-          messange.innerText = "Product added";
+          messange.innerText = "Товар додано";
           productDetailsContainer.append(messange);
         });
 
@@ -1077,7 +1092,7 @@
 
         // Додаємо кнопку для закриття вікна
         const closeButton = document.createElement("button");
-        closeButton.innerText = "Close";
+        closeButton.innerText = "Закрити";
         closeButton.style.margin = "10px";
         closeButton.addEventListener("click", function () {
           // Очищаємо контейнер для закриття вікна
@@ -1098,7 +1113,7 @@
       titleElement.style.marginBottom = "0";
 
       const priceElement = document.createElement("p");
-      priceElement.textContent = `Price: ${product.price.toFixed(2)} USD`;
+      priceElement.textContent = `Ціна: ${product.price.toFixed(2)} грн.`;
 
       const imageElement = document.createElement("img");
       imageElement.src = product.image;
@@ -1238,75 +1253,78 @@
 
 
 </script>
+                </div>
+              </div>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <div class="container footer__container">
+          <div class="footer__content">
+            <div class="footer__top">
+              <div class="footer__column">
+                <h3 class="footer__title">Покупцям</h3>
+                <ul class="footer__list">
+                  <li class="footer__item"><a href="tel:+380982024017" class="footer__link">Телефон:<br />
+                      +38(098)202-40-17</a>
+                  </li>
+                  <li class="footer__item"><a href="#" class="footer__link">Чат</a></li>
+                  <li class="footer__item"><a href="#" class="footer__link">Про нас</a></li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <h3 class="footer__title">Компанія</h3>
+                <ul class="footer__list">
+                  <li class="footer__item"><a href="tel:+8665972742" class="footer__link">Оплата</a></li>
+                  <li class="footer__item"><a href="#" class="footer__link">Доставка</a></li>
+                  <li class="footer__item"><a href="#" class="footer__link">Сертифікати</a></li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <h3 class="footer__title">Напишіть нам</h3>
+                <form action="#" class="footer__form subscribe-form">
+                  <h4 class="subscribe-form__title">*Не хвилюйтесь, ми не надсилаємо спам</h4>
+                  <label class="subscribe-form__field">
+                    <input type="email" required placeholder="Email Address">
+                  </label>
+                  <button class="subscribe-form__btn btn-reset" type="submit">Надіслати</button>
+                </form>
+
+              </div>
+            </div>
+            <div class="footer__bottom">
+              <div class="footer__left">
+                <ul class="footer__list footer__list--row">
+                  <li class="footer__item"><a href="#" class="footer__link footer__link--row">Політика повернення</a>
+                  </li>
+                  <li class="footer__item"><a href="#" class="footer__link footer__link--row">Політика
+                      конфіденційності</a></li>
+                </ul>
+              </div>
+              <div class="footer__right">
+                <ul class="social footer__social">
+                  <li class="social__item"><a href="#" class="social__link social__link--tw"
+                      aria-label="Go to twitter"></a></li>
+                  <li class="social__item"><a href="https://www.facebook.com/vntu.official/"
+                      class="social__link social__link--fb" aria-label="Go to facebook"></a></li>
+                  <li class="social__item"><a href="#" class="social__link social__link--in"
+                      aria-label="Go to instagram"></a></li>
+                  <li class="social__item"><a href="#" class="social__link social__link--pin"
+                      aria-label="Go to pinterest"></a></li>
+                </ul>
+              </div>
             </div>
           </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__container">
-      <div class="footer__content">
-        <div class="footer__top">
-          <div class="footer__column">
-            <h3 class="footer__title">Покупцям</h3>
-            <ul class="footer__list">
-              <li class="footer__item"><a href="tel:+380982024017" class="footer__link">Телефон:<br/> +38(098)202-40-17</a>
-              </li>
-              <li class="footer__item"><a href="#" class="footer__link">Чат</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Про нас</a></li>
-            </ul>
-          </div>
-          <div class="footer__column">
-            <h3 class="footer__title">Компанія</h3>
-            <ul class="footer__list">
-              <li class="footer__item"><a href="tel:+8665972742" class="footer__link">Оплата</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Доставка</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Сертифікати</a></li>
-            </ul>
-          </div>
-          <div class="footer__column">
-            <h3 class="footer__title">Напишіть нам</h3>
-            <form action="#" class="footer__form subscribe-form">
-              <h4 class="subscribe-form__title">*Не хвилюйтесь, ми не надсилаємо спам</h4>
-              <label class="subscribe-form__field">
-                <input type="email" required placeholder="Email Address">
-              </label>
-              <button class="subscribe-form__btn btn-reset" type="submit">Надіслати</button>
-            </form>
-           
-          </div>
         </div>
-        <div class="footer__bottom">
-          <div class="footer__left">
-            <ul class="footer__list footer__list--row">
-              <li class="footer__item"><a href="#" class="footer__link footer__link--row">Політика повернення</a></li>
-              <li class="footer__item"><a href="#" class="footer__link footer__link--row">Політика конфіденційності</a></li>
-            </ul>
-          </div>
-          <div class="footer__right">
-            <ul class="social footer__social">
-              <li class="social__item"><a href="#" class="social__link social__link--tw"
-                  aria-label="Go to twitter"></a></li>
-              <li class="social__item"><a href="https://www.facebook.com/vntu.official/"
-                  class="social__link social__link--fb" aria-label="Go to facebook"></a></li>
-              <li class="social__item"><a href="#" class="social__link social__link--in"
-                  aria-label="Go to instagram"></a></li>
-              <li class="social__item"><a href="#" class="social__link social__link--pin"
-                  aria-label="Go to pinterest"></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      </footer>
+      <a href="#" class="to-top">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#to-top"></use>
+        </svg>
+      </a>
     </div>
-  </footer>
-  <a href="#" class="to-top">
-    <svg class="">
-      <use xlink:href="img/sprite.svg#to-top"></use>
-    </svg>
-  </a>
-  </div>
 
-</body>
+  </body>
 
 </html>

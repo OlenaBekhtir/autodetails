@@ -7,8 +7,9 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>3D models</title>
+  <title>AutoDetail</title>
   <link rel="stylesheet" href="css/main.min.css">
+  <link rel="shortcut icon" href="./img/logo.jpg" type="image/x-icon">
   <style>
     .catalog {
       margin-top: 100px;
@@ -21,6 +22,7 @@
 </head>
 
 <body>
+
   <body>
     <div class="site-container">
       <header class="header">
@@ -30,12 +32,13 @@
           </button>
           <nav class="nav header__nav">
             <a href="./index.html" class="logo" aria-label="logo">
-              <img class="logo__img" src="./img/logo.jpg" alt="logo"/>
+              <img class="logo__img" src="./img/logo.jpg" alt="logo" />
             </a>
             <ul class="nav__list">
               <li class="nav__item"><a href="./index.html" class="main-link nav__link-home">Головна</a>
               </li>
-              <li class="nav__item"><a href="./catalog.html" class="main-link nav__link-home nav__link--current">Каталог</a></li>
+              <li class="nav__item"><a href="./catalog.html"
+                  class="main-link nav__link-home nav__link--current">Каталог</a></li>
               <li class="nav__item"><a href="./basket.html" class="main-link nav__link nav__link-home">Корзина</a></li>
             </ul>
             <button class="nav__close btn-reset">close</button>
@@ -58,107 +61,122 @@
         </div>
       </header>
 
-  <main class="main">
-    <section class="catalog">
-      <div class="catalog-content">
-        <div class="container container-narrow">
-          @include('html/catalog-filter.html')
+      <main class="main">
+        <section class="catalog">
+          <div class="catalog-content">
+            <div class="container container-narrow">
+              @include('html/catalog-filter.html')
 
-          <div id="product-details"></div>
+              <div id="product-details"></div>
 
-          <div class="catalog-grid">
-            <div class="catalog-grid__props catalog-props">
-              <div class="catalog-props__top">
-                <button class="btn-reset catalog-mobile-filters">
-                  <svg height="394pt" viewBox="-5 0 394 394.00003" width="394pt" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="m367.820312 0h-351.261718c-6.199219-.0117188-11.878906 3.449219-14.710938 8.960938-2.871094 5.585937-2.367187 12.3125 1.300782 17.414062l128.6875 181.285156c.042968.0625.089843.121094.132812.183594 4.675781 6.3125 7.207031 13.960938 7.21875 21.816406v147.800782c-.027344 4.375 1.691406 8.582031 4.773438 11.6875 3.085937 3.101562 7.28125 4.851562 11.65625 4.851562 2.222656-.003906 4.425781-.445312 6.480468-1.300781l72.3125-27.570313c6.476563-1.980468 10.777344-8.09375 10.777344-15.453125v-120.015625c.011719-7.855468 2.542969-15.503906 7.214844-21.816406.042968-.0625.089844-.121094.132812-.183594l128.691406-181.289062c3.667969-5.097656 4.171876-11.820313 1.300782-17.40625-2.828125-5.515625-8.511719-8.9765628-14.707032-8.964844zm0 0" />
-                  </svg>
-                  <span>Filters</span>
-                </button>
-                
-                <select class="custom-select" id="sortSelect">
-                  <option class="custom-select__item" value="cheap">Оберіть сортування</option>
-                  <option class="custom-select__item" value="cheap">Спочатку дешевші</option>
-                  <option class="custom-select__item" value="expensive">Спочатку дорожчі</option>
-                </select>
+              <div class="catalog-grid">
+                <div class="catalog-grid__props catalog-props">
+                  <div class="catalog-props__top">
+                    <button class="btn-reset catalog-mobile-filters">
+                      <svg height="394pt" viewBox="-5 0 394 394.00003" width="394pt" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="m367.820312 0h-351.261718c-6.199219-.0117188-11.878906 3.449219-14.710938 8.960938-2.871094 5.585937-2.367187 12.3125 1.300782 17.414062l128.6875 181.285156c.042968.0625.089843.121094.132812.183594 4.675781 6.3125 7.207031 13.960938 7.21875 21.816406v147.800782c-.027344 4.375 1.691406 8.582031 4.773438 11.6875 3.085937 3.101562 7.28125 4.851562 11.65625 4.851562 2.222656-.003906 4.425781-.445312 6.480468-1.300781l72.3125-27.570313c6.476563-1.980468 10.777344-8.09375 10.777344-15.453125v-120.015625c.011719-7.855468 2.542969-15.503906 7.214844-21.816406.042968-.0625.089844-.121094.132812-.183594l128.691406-181.289062c3.667969-5.097656 4.171876-11.820313 1.300782-17.40625-2.828125-5.515625-8.511719-8.9765628-14.707032-8.964844zm0 0" />
+                      </svg>
+                      <span>Filters</span>
+                    </button>
+
+                    <div class="catalog-props__columns catalog-columns">
+                      <span class="catalog-columns__text">Кількість колонок:</span>
+                      <ul class="catalog-columns__list">
+                        <li class="catalog-columns__item"><button class="btn-reset main-link catalog-columns__btn"
+                            data-columns="3">3</button></li>
+                        <li class="catalog-columns__item"><button
+                            class="btn-reset main-link catalog-columns__btn catalog-columns__btn--current"
+                            data-columns="4">4</button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <select class="custom-select" id="sortSelect">
+                      <option class="custom-select__item" value="cheap">Оберіть сортування</option>
+                      <option class="custom-select__item" value="cheap">Спочатку дешевші</option>
+                      <option class="custom-select__item" value="expensive">Спочатку дорожчі</option>
+                    </select>
+
+                  </div>
+                  <div class="catalog-props__choice catalog-choice">
+                    <button class="btn-reset catalog-choice__clear">Очистити</button>
+                  </div>
+
+                  <div id="products-container" class="catalog-grid__content"></div>
+                  @include('html/catalog-grid.html')
+                </div>
+              </div>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <div class="container footer__container">
+          <div class="footer__content">
+            <div class="footer__top">
+              <div class="footer__column">
+                <h3 class="footer__title">Покупцям</h3>
+                <ul class="footer__list">
+                  <li class="footer__item"><a href="tel:+380982024017" class="footer__link">Телефон:<br />
+                      +38(098)202-40-17</a>
+                  </li>
+                  <li class="footer__item"><a href="#" class="footer__link">Чат</a></li>
+                  <li class="footer__item"><a href="#" class="footer__link">Про нас</a></li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <h3 class="footer__title">Компанія</h3>
+                <ul class="footer__list">
+                  <li class="footer__item"><a href="tel:+8665972742" class="footer__link">Оплата</a></li>
+                  <li class="footer__item"><a href="#" class="footer__link">Доставка</a></li>
+                  <li class="footer__item"><a href="#" class="footer__link">Сертифікати</a></li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <h3 class="footer__title">Напишіть нам</h3>
+                <form action="#" class="footer__form subscribe-form">
+                  <h4 class="subscribe-form__title">*Не хвилюйтесь, ми не надсилаємо спам</h4>
+                  <label class="subscribe-form__field">
+                    <input type="email" required placeholder="Email Address">
+                  </label>
+                  <button class="subscribe-form__btn btn-reset" type="submit">Надіслати</button>
+                </form>
 
               </div>
-              <div class="catalog-props__choice catalog-choice">
-                <button class="btn-reset catalog-choice__clear">Очистити</button>
+            </div>
+            <div class="footer__bottom">
+              <div class="footer__left">
+                <ul class="footer__list footer__list--row">
+                  <li class="footer__item"><a href="#" class="footer__link footer__link--row">Політика повернення</a>
+                  </li>
+                  <li class="footer__item"><a href="#" class="footer__link footer__link--row">Політика
+                      конфіденційності</a></li>
+                </ul>
               </div>
-
-              <div id="products-container" class="catalog-grid__content"></div>
-              @include('html/catalog-grid.html')
+              <div class="footer__right">
+                <ul class="social footer__social">
+                  <li class="social__item"><a href="#" class="social__link social__link--tw"
+                      aria-label="Go to twitter"></a></li>
+                  <li class="social__item"><a href="https://www.facebook.com/vntu.official/"
+                      class="social__link social__link--fb" aria-label="Go to facebook"></a></li>
+                  <li class="social__item"><a href="#" class="social__link social__link--in"
+                      aria-label="Go to instagram"></a></li>
+                  <li class="social__item"><a href="#" class="social__link social__link--pin"
+                      aria-label="Go to pinterest"></a></li>
+                </ul>
+              </div>
             </div>
           </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__container">
-      <div class="footer__content">
-        <div class="footer__top">
-          <div class="footer__column">
-            <h3 class="footer__title">Покупцям</h3>
-            <ul class="footer__list">
-              <li class="footer__item"><a href="tel:+380982024017" class="footer__link">Телефон:<br/> +38(098)202-40-17</a>
-              </li>
-              <li class="footer__item"><a href="#" class="footer__link">Чат</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Про нас</a></li>
-            </ul>
-          </div>
-          <div class="footer__column">
-            <h3 class="footer__title">Компанія</h3>
-            <ul class="footer__list">
-              <li class="footer__item"><a href="tel:+8665972742" class="footer__link">Оплата</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Доставка</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Сертифікати</a></li>
-            </ul>
-          </div>
-          <div class="footer__column">
-            <h3 class="footer__title">Напишіть нам</h3>
-            <form action="#" class="footer__form subscribe-form">
-              <h4 class="subscribe-form__title">*Не хвилюйтесь, ми не надсилаємо спам</h4>
-              <label class="subscribe-form__field">
-                <input type="email" required placeholder="Email Address">
-              </label>
-              <button class="subscribe-form__btn btn-reset" type="submit">Надіслати</button>
-            </form>
-           
-          </div>
         </div>
-        <div class="footer__bottom">
-          <div class="footer__left">
-            <ul class="footer__list footer__list--row">
-              <li class="footer__item"><a href="#" class="footer__link footer__link--row">Політика повернення</a></li>
-              <li class="footer__item"><a href="#" class="footer__link footer__link--row">Політика конфіденційності</a></li>
-            </ul>
-          </div>
-          <div class="footer__right">
-            <ul class="social footer__social">
-              <li class="social__item"><a href="#" class="social__link social__link--tw"
-                  aria-label="Go to twitter"></a></li>
-              <li class="social__item"><a href="https://www.facebook.com/vntu.official/"
-                  class="social__link social__link--fb" aria-label="Go to facebook"></a></li>
-              <li class="social__item"><a href="#" class="social__link social__link--in"
-                  aria-label="Go to instagram"></a></li>
-              <li class="social__item"><a href="#" class="social__link social__link--pin"
-                  aria-label="Go to pinterest"></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      </footer>
+      <a href="#" class="to-top">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#to-top"></use>
+        </svg>
+      </a>
     </div>
-  </footer>
-  <a href="#" class="to-top">
-    <svg class="">
-      <use xlink:href="img/sprite.svg#to-top"></use>
-    </svg>
-  </a>
-  </div>
 
-</body>
+  </body>
 
 </html>
