@@ -169,7 +169,7 @@
             titleElement.textContent = cartItem.title;
 
             const priceElement = document.createElement("p");
-            priceElement.textContent = `Price: ${cartItem.price.toFixed(2)} USD`;
+            priceElement.textContent = `Ціна: ${cartItem.price.toFixed(2)} грн.`;
             priceElement.classList.add("basket-price")
 
             const imageElement = document.createElement("img");
@@ -189,7 +189,7 @@
             totalPrice += cartItem.price;
         });
 
-        totalPriceElement.textContent = `Total price: ${totalPrice.toFixed(2)} USD`;
+        totalPriceElement.textContent = `Усього: ${totalPrice.toFixed(2)} грн.`;
 
         // Додаємо обробник подій для кнопки "Очистити кошик"
         resetButton.addEventListener("click", function () {
@@ -206,8 +206,8 @@
             // Перевіряємо, чи кошик порожній
             if (cart.length === 0) {
                 // Показуємо повідомлення про те, що кошик порожній
-                emptyCartMessageElement.innerText = "Basket empty";
-                totalPriceElement.textContent = `Total price: 0.00 USD`;
+                emptyCartMessageElement.innerText = "Кошик порожній";
+                totalPriceElement.textContent = `Усього: 0.00 грн.`;
                 // emptyCartMessageElement.style.display = "block";
 
                 // Ховаємо інші елементи
@@ -243,7 +243,7 @@
 
                 // Виводимо загальну кількість товарів та ціну на екран
                 // totalQuantityElement.textContent = `Загальна кількість товарів: ${totalQuantity}`;
-                totalPriceElement.textContent = `Total price: ${totalPrice.toFixed(2)} USD`;
+                totalPriceElement.textContent = `Усього: ${totalPrice.toFixed(2)} грн.`;
             }
 
         });
